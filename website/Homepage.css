@@ -9,6 +9,7 @@ body{
 .wrapper{
 	width: 90%;
 	margin: 0 auto;
+	font-size: 100%;
 }
 header{
 	width: 100%;
@@ -94,7 +95,7 @@ animation: back 20s linear infinite;
 	color: bisque;
 }
 .About-us h2{
-	font-size: 40px;
+	font-size: 500%;
 	margin: 0;
 	padding-top: 30px;
 	letter-spacing: 4px;
