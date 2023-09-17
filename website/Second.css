@@ -78,11 +78,11 @@ animation: back 20s linear infinite;
 	font-size: 50px;
 }
 .left{
-	display: block;
+	
 	margin-left: 10;
 	margin-right: auto;
 	width: 40%;
-	float: left;
+	float: center;
 }
 .AOT-content{
 	margin-left: 10%;
@@ -102,7 +102,7 @@ animation: back 20s linear infinite;
 	
 	margin-left: 10;
 	margin-right: auto;
-	float: left;
+	float: center;
 	width: 40%;
 }
 .DS-content{
@@ -116,7 +116,7 @@ animation: back 20s linear infinite;
 	margin-left: 10;
 	margin-right: auto;
 	width: 40%;
-	float: left;
+	float: center;
 }
 .CSM-content{
 	margin-left: 10%;
