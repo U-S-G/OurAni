@@ -78,6 +78,9 @@ nav a:hover{
 	color: rgb(244, 187, 187);
 	font-size: 50px;
 }
+.inner{
+	font-size: 150%;
+}
 .Author{
     margin-top: 2%;
     margin-left: 3%;
