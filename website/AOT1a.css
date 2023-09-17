@@ -70,7 +70,7 @@ nav a:hover{
 }
 .content{
     width: 100%;
-	height: 3000px;
+	height: 5500px;
 	position: relative;
 	background: #000039;
 	top: 600px;
@@ -94,7 +94,11 @@ nav a:hover{
 	font-size: 25px;
 	float: right;
     width: 50%;
-}.words{
+}
+.inner{
+	font-size: 150%;
+}
+.words{
 	color: #fff;
 	font-style: italic;
 	font-size: 25px;
@@ -103,7 +107,7 @@ nav a:hover{
 	margin-right: 5%;
 }
 .theory{
-	font-size: 25px;
+	font-size: 100%;
 	margin-left: 10%;
 	margin-right: 5%;
 	float: left;
