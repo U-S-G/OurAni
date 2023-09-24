@@ -1,3 +1,6 @@
+html{
+	scroll-behavior: smooth;
+}
 *{
     margin: 0;
 	padding: 0;
@@ -70,7 +73,7 @@ nav a:hover{
 }
 .content{
     width: 100%;
-	height: 5500px;
+	height: 2000px;
 	position: relative;
 	background: #000039;
 	top: 600px;
@@ -106,25 +109,28 @@ nav a:hover{
 	margin-left: 10%;
 	margin-right: 5%;
 }
-.theory{
-	font-size: 100%;
-	margin-left: 10%;
-	margin-right: 5%;
+.content a{
+	color: #fff;
+}
+.content a:hover{
+	-webkit-text-stroke: 1px #fff;
+	color: #130f40;
+}
+.sidepic{
 	float: left;
-}
-.mini1{
-	float: center;
 	width: 50%;
 }
-.mini2{
-	float: center;
-	width: 50%;
-}
-.mini3{
-	float: center;
-	width: 50%;
-}
-.mini4{
-	float: center;
-	width: 50%;
+.gototop{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	background: #7889d4;
+	bottom: 40px;
+	right: 50px;
+
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	font-size: 30px;
 }
