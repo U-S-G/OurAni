@@ -1,4 +1,6 @@
-*{
+html{
+	scroll-behavior: smooth;
+}*{
     margin: 0;
 	padding: 0;
 }
@@ -66,8 +68,6 @@ animation: back 20s linear infinite;
 		background-position: 2000px 0;
 	}
 }
-
-
 .AOT{
 	width: 100%;
 	height: 5010px;
@@ -123,4 +123,42 @@ animation: back 20s linear infinite;
 	margin-right: 5%;
 	font-size: 100%;
 	font-style: italic;
+}
+.gototop{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	background: #7889d4;
+	bottom: 40px;
+	right: 50px;
+
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	font-size: 30px;
+}
+.AOT-content a{
+	color: #fff;
+}
+.AOT-content a:hover{
+	text-decoration: #130f40;
+	color: #130f40;
+	-webkit-text-stroke: 1px #fff;
+}
+.DS-content a{
+	color: #fff;
+}
+.DS-content a:hover{
+	text-decoration: #130f40;
+	color: #130f40;
+	-webkit-text-stroke: 1px #fff;
+}
+.CSM-content a{
+	color: #fff;
+}
+.CSM-content a:hover{
+	text-decoration: #130f40;
+	color: #130f40;
+	-webkit-text-stroke: 1px #fff;
 }
