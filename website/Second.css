@@ -110,6 +110,12 @@ animation: back 20s linear infinite;
 	width: 20%;
 	float: left;
 }
+.left6{
+	margin-top: 1%;
+	margin-left: 4%;
+	width: 19%;
+	float: left;
+}
 .gototop{
 	position: fixed;
 	width: 50px;
