@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>
+            OurAni
+        </title>
+        <link rel="stylesheet" href="STUDIO DOGA KOBO.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="STUDIO DOGA KOBO.js" defer></script>
+        
+        <style>
+            .loader{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(to top,#0040ff,transparent);
+                z-index: 100000000000000;
+                transition: opacity 0.75s, visibility 0.75s;
+            }
+            .loader--hidden{
+                opacity: 0;
+                visibility: hidden; 
+            }
+            .loader::after{
+                content: "";
+                width: 75px;
+                height: 75px;
+                border: 15px solid #ddd;
+                border-top-color: #0040ff;
+                border-radius: 50%;
+                animation: loading 0.75s ease infinite;
+            }
+            @keyframes loading {
+                from { transform: rotate(0turn)}
+                to {transform: rotate(1turn)}
+            }
+                    </style>
+                    <script>
+                        window.addEventListener("load", () => {
+                            const loader = document.querySelector(".loader");
+                            loader.classList.add("loader--hidden");
+            
+                            loader.addEventListener("trasitionend", () => {
+                                document.body.removeChild(loader);
+                            })
+                        })
+                    </script>
+                </head>
+                
+                <body>
+                    <div class="loader"></div>
+        <header>
+            <a href="../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../INDEX.html" class="active">Home</a></li>
+                <li><a class="GoBack" href="../../Tv-shows/Oshi-no-ko/Studio/Oshinoko-studio.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            </ul>
+        </header>
+
+        <div class="banner">
+            <img src="STUDIO DOGA KOBO.jpg" class="bg">
+        </div>
+
+
+        <div class="container">
+            <h3 class="title">Other projects</h3>
+
+            <div class="shows-container">
+            <!--  1 pop-up -->
+                <div class="show" data-name="p-1">
+                    <img src="Shows/Oshinoko poster.jpeg" alt="Oshi-no-ko">
+                    <h3>Oshi-no-ko</h3>
+                    <div class="Author"><p>Aka Akasaka</p>
+                                        <p>MENGO YOKOYARI</p></div>
+              </div>
+             <!--  2 pop-up -->
+
+             <!--  3 pop-up -->
+
+             <!--  4 pop-up -->
+
+             <!--  5 pop-up -->
+         </div>
+        </div>
+       
+        <div class="shows-preveiw">
+            <!--  1 pop-up preview-->
+            <div class="preview" data-target="p-1">
+                <i class="fas fa-times"></i>
+                <img src="Shows/Oshinoko poster.jpeg" alt="Oshi-no-ko">
+                <h3>Oshi-no-ko</h3>
+                <p>A doctor and his recently-deceased patient are reborn as twins to a famous Japanese musical idol and navigate the highs and lows of the Japanese 
+                    entertainment industry as they grow up together through their lives.</p>
+                <div class="Author"><p>Aka Akasaka</p>
+                                    <p>MENGO YOKOYARI</p></div>
+                <div class="buttons">
+                    <a href="../../Tv-shows/Oshi-no-ko/Oshi no ko.html" class="Learn-more">Learn more</a>
+                </div>
+            </div>
+            <!--  2 pop-up preview-->
+            
+            <!--  3 pop-up preview-->
+
+        </div>
+
+    </body>
+</html>

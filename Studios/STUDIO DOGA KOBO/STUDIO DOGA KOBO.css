@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+*
+{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    min-height: 100vh;
+    background: linear-gradient(#0040ff, #8000ff);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+header 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+
+}
+header .logo
+{
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 15px;
+    text-decoration: none;
+}
+header ul li a:hover,
+header ul .active
+{
+    color: #8000ff;
+    background: #fff;
+}
+.bg {
+    top: 0;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+.banner {
+    position: relative;
+    height: 1000px; /* Adjusted height to match the banner */
+}
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 500px;
+    background: linear-gradient(to right, #f00, #00f);
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+    border-radius: 0 0 50% 0;
+    opacity: 0.9;
+    display: block;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    position: relative;
+    top: -500px;
+}
+.container .title{
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.container .shows-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+.container .shows-container .show{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #12046b;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+.container .shows-container .show:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0;
+}
+.container .shows-container .show img{
+    height: 20rem;
+}
+.container .shows-container .show:hover img{
+    transform: scale(.9);
+}
+.container .shows-container .show h3{
+    padding: 5rem 0;
+    font-size: 2rem;
+    color: #fff;
+}
+.container .shows-container .show:hover h3{
+    color: aqua;
+}
+.container .shows-container .show .Author{
+    font-size: 2rem;
+    color: #fff;
+}
+.shows-preveiw{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+.shows-preveiw .preview{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #041dad;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+    max-height: 90vh;
+    overflow: auto;
+}
+.shows-preveiw .preview.active{
+    display: inline-block;
+}
+.shows-preveiw .preview img{
+    height: 20rem;
+    margin-bottom: -5rem;
+}
+.shows-preveiw .preview .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 4rem;
+}
+.shows-preveiw .preview .fa-times:hover{
+    transform: rotate(90deg);
+    color: #111;
+}
+.shows-preveiw .preview h3{
+    margin-bottom: -5rem;
+    color: #fff;
+    padding: 5rem 0;
+    font-size: 2.5rem;
+}
+.shows-preveiw .preview p{
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.shows-preveiw .preview .Author{
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: aqua;
+}
+.shows-preveiw .preview .buttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.shows-preveiw .preview .buttons a{
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: 1rem solid #444;
+}
+.shows-preveiw .preview .buttons a.Learn-more{
+    background: #444;
+    color: #fff;
+}
+.shows-preveiw .preview .buttons a.Learn-more:hover{
+    background: #111;
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width:768px){
+    .shows-preveiw .preview img{
+        height: 25rem;
+        margin-bottom: -5rem;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}

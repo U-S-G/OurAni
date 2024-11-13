@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>
+            OurAni
+        </title>
+        <link rel="stylesheet" href="mappa.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="mappa.js" defer></script>
+        
+        <style>
+            .loader{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(to top,#0040ff,transparent);
+                z-index: 100000000000000;
+                transition: opacity 0.75s, visibility 0.75s;
+            }
+            .loader--hidden{
+                opacity: 0;
+                visibility: hidden; 
+            }
+            .loader::after{
+                content: "";
+                width: 75px;
+                height: 75px;
+                border: 15px solid #ddd;
+                border-top-color: #0040ff;
+                border-radius: 50%;
+                animation: loading 0.75s ease infinite;
+            }
+            @keyframes loading {
+                from { transform: rotate(0turn)}
+                to {transform: rotate(1turn)}
+            }
+                    </style>
+                    <script>
+                        window.addEventListener("load", () => {
+                            const loader = document.querySelector(".loader");
+                            loader.classList.add("loader--hidden");
+            
+                            loader.addEventListener("trasitionend", () => {
+                                document.body.removeChild(loader);
+                            })
+                        })
+                    </script>
+                </head>
+                
+                <body>
+                    <div class="loader"></div>
+        <header>
+            <a href="../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../INDEX.html" class="active">Home</a></li>
+                <li><a class="GoBack" href="../../Tv-shows/attack-on-titan/Studio/attack on titan studio.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            </ul>
+        </header>
+
+        <div class="banner">
+            <img src="Mappa.jpg" class="bg">
+        </div>
+
+
+        <div class="container">
+            <h3 class="title">Other projects</h3>
+
+            <div class="shows-container">
+            <!--  1 pop-up -->
+                <div class="show" data-name="p-1">
+                    <img src="shows/AOTposter.jpg" alt="AOT">
+                    <h3>Attack on titan</h3>
+                    <div class="Author">HAJIME ISAYAMA</div>
+              </div>
+             <!--  2 pop-up -->
+             <div class="show" data-name="p-2">
+                    <img src="shows/JJkPoster.jpeg" alt="AOT">
+                    <h3>Jujutsu Kaisen</h3>
+                    <div class="Author">GEGE AKUTAMI</div>
+             </div>
+             <!--  3 pop-up -->
+             <div class="show" data-name="p-3">
+                    <img src="shows/CSMPoster.jpg" alt="AOT">
+                    <h3>Chainsaw-man</h3>
+                    <div class="Author">TATSUKI FUJIMOTO</div>
+             </div>
+             <!--  4 pop-up -->
+
+             <!--  5 pop-up -->
+         </div>
+        </div>
+       
+        <div class="shows-preveiw">
+            <!--  1 pop-up preview-->
+            <div class="preview" data-target="p-1">
+                <i class="fas fa-times"></i>
+                <img src="shows/AOTposter.jpg" alt="AOT">
+                <h3>attack-on-titan</h3>
+                <p>Attack on Titan" is a riveting and intense anime series that has captivated audiences worldwide. 
+                    Set in a world where humanity resides within enormous walled cities to protect themselves from giant humanoid creatures known as Titans,
+                     the series unfolds with a sense of mystery and suspense.
+
+                    The story follows Eren Yeager, Mikasa Ackerman, and Armin Arlert, who witness the destruction of their hometown when a 
+                    colossal Titan breaches the outer wall. Fueled by a desire for revenge and the discovery of his own mysterious abilities,
+                     Eren joins the military to fight against the Titans and uncover the truth behind their existence.
+                    
+                    As the narrative unfolds, "Attack on Titan" explores complex themes such as survival, sacrifice, and the consequences of war. 
+                    The characters face moral dilemmas, political intrigue, and shocking revelations, making the series a compelling and thought-provoking experience.</p>
+                <div class="Author">HAJIME ISAYAMA</div>
+                <div class="buttons">
+                    <a href="../../Tv-shows/attack-on-titan/Attack-on-titan.html" class="Learn-more">Learn more</a>
+                </div>
+            </div>
+            <!--  2 pop-up preview-->
+            <div class="preview" data-target="p-2">
+                <i class="fas fa-times"></i>
+                <img src="shows/JJkPoster.jpeg" alt="Jujustu">
+                <h3>Jujutsu Kaisen</h3>
+                <p>Jujutsu Kaisen" (JJK) is an electrifying anime that seamlessly blends supernatural action, intense battles, and genuine character development.
+                     The story revolves around Yuji Itadori, an ordinary high school student drawn into a world of curses, dark magic, and the supernatural.
+
+                    When Yuji's friends inadvertently unseal a cursed object containing malevolent Cursed Spirits, his life takes an unexpected turn. 
+                    After a fateful encounter with the enigmatic Satoru Gojo, a Jujutsu Sorcerer, Yuji finds himself thrust into the dangerous and thrilling world of Jujutsu Sorcery. 
+                    The mission: to collect powerful and malicious Cursed objects, and confront and eliminate Cursed Spirits.</p>
+                <div class="Author">GEGE AKUTAMI</div>
+                <div class="buttons">
+                    <a href="../../Tv-shows/jjk/Jujustu kaisan.html" class="Learn-more">Learn more</a>
+                </div>
+            </div>
+            <!--  3 pop-up preview-->
+            <div class="preview" data-target="p-3">
+                <i class="fas fa-times"></i>
+                <img src="shows/CSMPoster.jpg" alt="Chainsaw-man">
+                <h3>attack-on-titan</h3>
+                <p>Chainsaw Man" is a captivating and exhilarating manga series that blends horror, action, and dark humor to create a unique and unforgettable experience. 
+                    The story follows Denji, a young man burdened with debt and struggling for survival in a world plagued by monstrous creatures known as Devils. 
+                    To make ends meet, Denji works as a devil hunter alongside his pet devil, Pochita, who can transform into chainsaw blades.
+
+                    As Denji gets entangled with the devil hunting organization, he faces gruesome battles against terrifying devils, leading to unexpected twists and turns. 
+                    The series takes unexpected and often darker turns, exploring themes of identity, purpose, and the consequences of one's choices.</p>
+                <div class="Author">TATSUKI FUJIMOTO</div>
+                <div class="buttons">
+                    <a href="../../Tv-shows/chainsaw-man/Chainsaw man.html" class="Learn-more">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

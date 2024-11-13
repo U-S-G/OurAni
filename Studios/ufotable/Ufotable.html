@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>
+            OurAni
+        </title>
+        <link rel="stylesheet" href="Ufotable.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="Ufotable.js" defer></script>
+        
+        <style>
+            .loader{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(to top,#0040ff,transparent);
+                z-index: 100000000000000;
+                transition: opacity 0.75s, visibility 0.75s;
+            }
+            .loader--hidden{
+                opacity: 0;
+                visibility: hidden; 
+            }
+            .loader::after{
+                content: "";
+                width: 75px;
+                height: 75px;
+                border: 15px solid #ddd;
+                border-top-color: #0040ff;
+                border-radius: 50%;
+                animation: loading 0.75s ease infinite;
+            }
+            @keyframes loading {
+                from { transform: rotate(0turn)}
+                to {transform: rotate(1turn)}
+            }
+                    </style>
+                    <script>
+                        window.addEventListener("load", () => {
+                            const loader = document.querySelector(".loader");
+                            loader.classList.add("loader--hidden");
+            
+                            loader.addEventListener("trasitionend", () => {
+                                document.body.removeChild(loader);
+                            })
+                        })
+                    </script>
+                </head>
+                
+                <body>
+                    <div class="loader"></div>
+        <header>
+            <a href="../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../INDEX.html" class="active">Home</a></li>
+                <li><a class="GoBack" href="../../Tv-shows/demon-slayer/Studio/demon-slayer-studio.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            </ul>
+        </header>
+
+        <div class="banner">
+            <img src="Ufotable.jfif" class="bg">
+        </div>
+
+
+        <div class="container">
+            <h3 class="title">Other projects</h3>
+
+            <div class="shows-container">
+            <!--  1 pop-up -->
+                <div class="show" data-name="p-1">
+                    <img src="shows/Demon slayer poster.jpeg" alt="AOT">
+                    <h3>Demon-slayer</h3>
+                    <div class="Author">KOYOHARU GOTOUGE</div>
+              </div>
+             <!--  2 pop-up -->
+
+             <!--  3 pop-up -->
+
+             <!--  4 pop-up -->
+
+             <!--  5 pop-up -->
+         </div>
+        </div>
+       
+        <div class="shows-preveiw">
+            <!--  1 pop-up preview-->
+            <div class="preview" data-target="p-1">
+                <i class="fas fa-times"></i>
+                <img src="sHOWS/Demon slayer poster.jpeg" alt="Demon-slayer">
+                <h3>Demon-slayer</h3>
+                <p>This world is set in early 20th century Taishō-era Japan, man-eating demons roam the land each night.
+                     13-year-old Tanjiro Kamado’s world is turned upside down when he returns home one morning to find his entire family murdered save for his sister Nezuko—who has turned into a demon. 
+                     Determined to avenge their deaths and find a cure that would transform Nezuko back into a human, Tanjiro sets out on a journey to train for the Demon Slayer Corps. 
+                    The story follows him as he joins this underground organization of skilled fighters who dedicate their lives to protecting humans from the vicious creatures</p>
+                <div class="Author">KOYOHARU GOTOUGE</div>
+                <div class="buttons">
+                    <a href="../../Tv-shows/demon-slayer/Demon slayer.html" class="Learn-more">Learn more</a>
+                </div>
+            </div>
+            <!--  2 pop-up preview-->
+            
+            <!--  3 pop-up preview-->
+
+        </div>
+
+    </body>
+</html>
