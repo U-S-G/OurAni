@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+*
+*,
+*::after,
+*::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    background: linear-gradient(#0040ff,#8000ff);
+}
+header 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo
+{
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 15px;
+    text-decoration: none;
+}
+header ul li a:hover,
+header ul .active
+{
+    color: #8000ff;
+    background: #fff;
+}
+.container
+{
+    width: 80%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+}
+@media only screen and (max-width:780px)
+{
+    .container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.card
+{
+    width: 270px;
+    height: 370px;
+    margin: 15px;
+    perspective: 1000px;
+    font-family: 'poppins', sans-serif;
+    border-radius: 10px;
+}
+.card_inner
+{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s linear;
+    border-radius: 10px;
+}
+.face
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: whitesmoke;
+    border-radius: 10px;
+}
+.back
+{
+    background: center;
+    overflow: hidden;
+    z-index: -1;
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+}
+.back::before
+{
+    content: "";
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    box-sizing: 100% 100%;
+
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+.front, 
+.back
+{
+    transition: all .5s linear;
+}
+.front 
+{
+    background: url(BACK.jpg);
+    background-size: cover;
+    z-index: 1;
+    box-shadow: 5px 5px 5px #000a65;
+}
+.heading
+{
+    width: 100%;
+    background: #004e92;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+}
+.description
+{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-style: italic;
+
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background-image: url(back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 15s linear infinite;
+}
+@keyframes back{
+	100%{
+		background-position: 2000px 0;
+	}
+}
+
+.h3
+{
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(249, 249, 249);
+}
+.back
+{
+    background-size: cover;
+    box-shadow: 0 0 0 #000a65;
+}
+li
+{
+    margin-top: 15px;
+    color: whitesmoke;
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+.Character
+{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    border: 0 0 10px 10px;
+    padding: 15px;
+    color: #e7e7e7;
+}
+.card_inner.flipped {
+    transform: rotateY(180deg);
+}
+.break{
+    width: 100%;
+    height: 5px;
+    background-color: aqua;
+}
+.break h1
+{
+    margin: 100px auto;
+    font: 5px;
+    color: #ffffff;
+    width: 10px;
+}
+
+/* Charaters */
+/*//////////////////////////////////////////female//////////////////////// */
+.Kobeni
+{
+    background-image: url(Characters/Female/Kobeni.jfif);
+}
+.Himeno
+{
+    background-image: url(Characters/Female/Himeno.jfif);
+}
+.Power
+{
+    background-image: url(Characters/Female/Power.jfif);
+}
+.Makima
+{
+    background-image: url(Characters/Female/Makima.jfif);
+}
+.Reze
+{
+    background-image: url(Characters/Female/Reze.jfif);
+}
+.akane
+{
+    background-image: url(Characters/Female/akane.jfif);
+}
+/*////////////////////////////Male////////////////////////////////////// */
+.aki
+{
+    background-image: url(Characters/Males/𝒂𝒌𝒊.jfif);
+}
+.Denji
+{
+    background-image: url(Characters/Males/Denji.jfif);
+}
+.Kishibe
+{
+    background-image: url(Characters/Males/Kishibe.jfif);
+}
+.Katana
+{
+    background-image: url(Characters/Males/Katana.jfif);
+}
+/*different back pictures */
+/*////////////////////////////femaleS////////////////////////////////////// */
+.front.Kobeni
+{
+    background-image: url(Characters/Female/KobeniBack.jfif);
+    background-position: center;
+}
+.front.Himeno
+{
+    background-image: url(Characters/Female/Himenoback.jfif);
+    background-position: center;
+}
+.front.Power
+{
+    background-image: url(Characters/Female/Poweback.jfif);
+    background-position: center;
+}
+.front.Makima
+{
+    background-image: url(Characters/Female/Makimaback.jfif);
+    background-position: center;
+}
+.front.Reze
+{
+    background-image: url(Characters/Female/RezeBack.jfif);
+    background-position: center;
+}
+.front.akane
+{
+    background-image: url(Characters/Female/akaneBACK.jfif);
+    background-position: center;
+}
+/*////////////Males//////////////////*/
+.front.aki
+{
+    background-image: url(Characters/Males/𝒂𝒌𝒊Bak.jfif);
+    background-position: center;
+}
+.front.Denji
+{
+    background-image: url(Characters/Males/DenjiBack.jfif);
+    background-position: center;
+}
+.front.Kishibe
+{
+    background-image: url(Characters/Males/KishibeBack.jfif);
+    background-position: center;
+}
+.front.Katana
+{
+    background-image: url(Characters/Males/KatanaBack.jfif);
+    background-position: center;
+}
+/* COMING SOON CARD */
+.MORE,
+.front.more
+{
+    background-image: url(Characters/Coming\ soon.jfif);
+    background-position: center;
+}
