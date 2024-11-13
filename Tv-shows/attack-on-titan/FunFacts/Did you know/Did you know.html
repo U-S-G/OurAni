@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            OurAni
+        </title>
+        <link rel="Stylesheet" type="text/css" href="Did you know.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top, #0040ff, transparent);
+            z-index: 100000000000000;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+
+        .loader--hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader::after {
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #ddd;
+            border-top-color: #0040ff;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+
+        @keyframes loading {
+            from {
+                transform: rotate(0turn)
+            }
+
+            to {
+                transform: rotate(1turn)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader"></div>
+
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
+            loader.classList.add("loader--hidden");
+
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
+    </script>
+
+    <header>
+        <a href="../../../../INDEX.html" class="logo">Our-ani</a>
+        <ul>
+            <li><a href="../../../../INDEX.html" class="active">Home</a></li>
+            <li><a class="GoBack" href="../FunFacts.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            <li><a href="../../shop/AOT-shop.html"><img src="../../shop/images/cart.png" class="shop" ></a></li>
+        </ul>
+    </header>
+
+    <section>
+        <h1>14 Interesting Facts from Attack on Titan</h1>
+    </section>
+    <div class="theory">
+
+        <h2>Eren's name</h2>
+        <img src="saintEern.jpg">
+        <p>The name Eren means ‘saint’ or ‘holy person’ in Turkish.</p><br>
+
+        <h2>Mikasa’s nickname</h2>
+        <img src="Mikasanickname.jpg">
+        <p>Mikasa was also referred to as ‘worth one thousand soldiers’ due to her skills and intelligence. 
+            The line was actually from Tales of the Heike, where it was also used to describe a legendary female Japanese warrior Tomoe Gozen.</p><br>
+
+        <h2>The ‘Rogue Titan’</h2>
+        <img src="RogueTitan.jpg">
+        <p>Eren’s titan form did not have an official name, but the fans have called it ‘Rogue Titan’ due to its unusual behavior.</p><br>
+
+        <h2>The ‘Rogue Titan’ character reference</h2>
+        <img src="referenceR.png"><br>
+        <img src="referenceH.png">
+        <p>Eren’s titan form ‘Rogue Titan’ was modeled after middleweight mixed martial artist Yushin Okami</p><br>
+
+        <h2>Armored Titan reference</h2>
+        <img src="referenceA.png"><br>
+        <img src="referenceA1.png">
+        <p>The Armored Titan is based on the professional wrestler and mixed martial artist Brock Lesnar.</p><br>
+
+        <h2>Attack on Avengers</h2>
+        <img src="Attack on Avengers.webp">
+        <p>Attack on Titan actually had a crossover with Marvel Universe through a comic “Attack on Avengers” 
+            written by Hajime Isayama himself and published in the Japanese magazine Brutus.</p><br>
+
+        <h2>Attack on Titan blacklisted?</h2>
+        <img src="blacklisted.jpg">
+        <P>Attack on Titan is one of the anime series which is blacklisted in China as they want to ‘protect the healthy development of youth.’</P><br>
+
+        <h2>Favourite character</h2>
+        <img src="Fav character.jpg">
+        <p> Hajime Isyama’s favorite character is Jean Kirschtein. 
+            Cause Isayma admires how Jean says what he wants without worrying about what other people think. But it was all in the past.</p><br>
+
+        <h2>coincidence? i think not</h2>
+        <img src="half.jpg">
+        <p>Marco’s birthday is on June 16th, Which is exactly halfway through the year. 
+            This takes a whole new meaning when you find that half of his body is found. 
+            Maybe if he would’ve born in January, he would have died in a better way.</p><br>
+
+        <h2>hmm...</h2>
+        <img src="MoF.jfif">
+        <p>Hange is shown as a female in both anime and live-action film. But things aren’t so clear in the manga. 
+            Regarding this issue, Isayama has said that it is up to the readers to decide because he thinks “Either one is fine”.</p><br>
+
+        <h2>Freedom</h2>
+        <img src="free.jpg">
+        <p>Eren’s desire to go outside the walls stems from Isayama’s childhood. 
+            He grew in a village surrounded by mountains, and always wanted to see what was beyond them. 
+            The area surrounding walls was inspired by Isayama’s village.</p><br>
+
+        <h2>Save the potatoes</h2>
+        <img src="sasha.jpg">
+        <p>An Interview with Isayama’s editor revealed that everyone’s favorite potato girl, Sasha, was set to be killed off in manga chapter 36. 
+            Thankfully, the editor managed to change Isayama’s mind.</p><br>
+
+        <h2>Death to all</h2>
+        <img src="deattoall.jpg">
+        <p>Isayama originally planned to give the series a tragic conclusion, where every character dies. 
+            However, positive response to the manga and anime has caused the author to consider changing the ending due to the impact it could have on fans.</p><br>
+
+        <h2>.....</h2>
+        <img src="fear.jpg">
+        <p>Before becoming Mangaka, Isayama worked at an Internet Cafe. 
+            While working at an internet cafe, Isayama encountered a customer who grabbed him by the collar. 
+            It was this incident that showed him “the fear of meeting a person I can’t communicate with”, which is the feeling that he conveys through the Titans. 
+            Thus he created the scary Titans.</p><br>
+
+            
+         <li><a href="../Manga vs Anime/MangaVsAnime.html"><u>Attack on titan <b>(Manga vs Anime)</b></u></a></li>
+         <li><a href="#"><u>FunFacts about Demon slayer you didnt know</u></a></li>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:200,200,400,500,600,700,800,900&display=swap');
+*
+{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700vh;
+    background: linear-gradient(#0040ff,#8000ff);
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+header .logo
+{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+}
+header ul
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li .shop
+{
+    width: 30%;
+}
+header ul li a
+{
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+header ul li a:hover,
+header ul .active
+{
+    color: #8000ff;
+    background: #fff;
+}
+section
+{
+    position: absolute;
+    color: #ffffff;
+    top: 150px;
+    left: 100px;
+    bottom: 10px;
+    margin-bottom: 50px;
+}
+.theory img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.theory h2
+{
+    font-size: 2em ;
+}
+.theory 
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 16px;
+    position: absolute;
+    left: 20px;
+    top: 200px;
+    color: #fff;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.theory a
+{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
