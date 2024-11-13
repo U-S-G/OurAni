@@ -1,247 +1,203 @@
-@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
-*
-{  
+/* Import and Base Styles */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-body
-{
+
+body {
     min-height: 100vh;
     overflow-x: hidden;
-    background: linear-gradient(#0040ff,#8000ff);
+    background: linear-gradient(#0040ff, #8000ff);
 }
-header
-{
-    position: absolute;
+
+/* Header Styling */
+header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10000;
+    z-index: 1000;
 }
-header .logo
-{
+
+header .logo {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.8em;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
-header ul
-{
+
+header ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header ul li .shop
-{
-    width: 40%;
-}
-header ul li
-{
+
+header ul li {
     list-style: none;
-    margin-left: 20px;
+    margin-left: 15px;
 }
-header ul li a
-{
+
+header ul li a {
     text-decoration: none;
-    padding: 6px 15px;
+    padding: 6px 12px;
     color: #fff;
     border-radius: 20px;
 }
+
 header ul li a:hover,
-header ul li a.active
-{
+header ul li a.active {
     background: #fff;
     color: #8000ff;
 }
-section
-{
+
+/* Section Styling */
+section {
     position: relative;
     width: 100%;
     height: 100vh;
-    padding: 100px;
+    padding: 60px 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden; 
+    overflow: hidden;
 }
-section::before
-{
-   content: ''; 
-   position: absolute;
-   bottom: 0;
-   width: 100%; 
-   height: 100px;
-   background: linear-gradient(to top,#0040ff,transparent);
-   z-index: 1000;
-}
-section img
-{
-    position: absolute;
-    top: 0;
-    /*left: 0;*/ 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
-section img#moon
-{
-    mix-blend-mode: screen;
-}
-section img#aizawa
-{
-    margin-top: 5%;
-    width: 20%;
-    z-index: 10;
-    right: 0;
-}
-section img#kakashi
-{
-    margin-top: 5%;
-    overflow: visible;
-    z-index: 10;
-    width: 20%;
-    left: 0;
-}
-section img#Satoru
-{
-    margin-top: 15%;
-    overflow: visible;
-    width: 20%;
-}
-#text
-{
-    position: absolute;
-    right: -350px;
+
+#text {
     color: #fff;
-    white-space: nowrap;
-    font-size: 7.5Vw;
+    font-size: 6vw;
     z-index: 9;
+    text-align: center;
+    white-space: normal;
+    margin-top: 20px;
 }
-#btn
-{
-   text-decoration: none;
-   display: inline-block;
-   padding: 8px 30px;  
-   border-radius: 40px;
-   background: #fff;
-   color: #8000ff;
-   font-size: 1.5em;
-   z-index: 9;
-   transform: translateY(100px);
-}
-.sec
-{
-    position: relative;
-    padding: 100px;
-    background: #0040ff8d;
-}
-.sec h2
-{
-  font-size: 3.5em;
-  margin-bottom: 10px;
-  color: #fff;   
-}
-.sec p
-{
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 40px;
+    background: #fff;
+    color: #8000ff;
     font-size: 1.2em;
-    color: #fff;  
+    z-index: 9;
+    margin-top: 20px;
 }
-a,button{
-    cursor: pointer;
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    header .logo {
+        font-size: 1.5em;
+    }
+
+    header ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        background: #8000ff;
+        width: 100%;
+        display: none;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    header ul.show {
+        display: flex;
+    }
+
+    #text {
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    .hamburger {
+        top: 15px;
+        right: 15px;
+        display: block;
+        z-index: 1001;
+    }
 }
-nav{
-    position: absolute;
-    top: 100px;
-    right: 50px;
-    width: 250px;
-}
-.navigation{
+
+/* Styles for the Sidebar Navigation */
+.navigation {
     position: fixed;
-    right: -500px;
+    right: -100%;
     top: 0;
-    width: 350px;
+    width: 300px;
     height: 100%;
     background-color: #07004f;
-    transition: .5s;
+    transition: right 0.5s;
     z-index: 100000;
 }
+
 .navigation ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin-top: 50px;
+    text-align: right;
 }
 
 .navigation ul li {
+    padding: 15px;
     color: #fff;
-    text-align: right;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    padding: 20px 30px;
-    border-bottom: 1pt solid;
 }
 
 .navigation ul li a {
-    text-decoration: none;
-    color: #fff;  /* Set the color for normal state */
-    transition: color 0.3s ease-in-out; /* Add a smooth transition for color changes */
+    color: #fff;
+    transition: color 0.3s;
 }
 
 .navigation ul li a:hover {
-    color: #8000ff;  /* Set the color for hover state */
-}
-
-/* Add this if you want to style the active link */
-.navigation ul li a.active {
-    background: #fff;
     color: #8000ff;
 }
-.hamburger, .bar{
-    position: fixed;
-}
-.hamburger{
+
+.hamburger {
     display: block;
-    top: 5%;
-    left: 95%;
+    top: 20px;
+    right: 20px;
     width: 30px;
     height: 30px;
-    transform: translateY(-50%);
+    background: transparent;
     border: 0;
-    background: 0 0;
-}
-.bar{
-    top: 3px;
-    background: #000000;
-    width: 100%;
-    height: 4px;
-    transition: all .3s ease-in;
-}
-#bar2{
-    top: 11px;
-}
-#bar3{
-    top: 19px;
 }
 
-.navigation.active{
+.hamburger .bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+.hamburger.open #bar1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open #bar2 {
+    opacity: 0;
+}
+
+.hamburger.open #bar3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.navigation.active {
     right: 0;
-}
-.hamburger.open #bar1{
-    background-color: #fff;
-    transform: rotate(45deg) translate(6px, 5px);
-}
-.hamburger.open #bar2{
-    background-color: transparent;
-}
-.hamburger.open #bar3{
-    background-color: #fff;
-    transform: rotate(-45deg) translate(6px, -5px);
 }
