@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab || www.codinglabweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OurAni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .loader{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(to top,#0040ff,transparent);
+          z-index: 100000000000000;
+          transition: opacity 0.75s, visibility 0.75s;
+      }
+      .loader--hidden{
+          opacity: 0;
+          visibility: hidden; 
+      }
+      .loader::after{
+          content: "";
+          width: 75px;
+          height: 75px;
+          border: 15px solid #ddd;
+          border-top-color: #0040ff;
+          border-radius: 50%;
+          animation: loading 0.75s ease infinite;
+      }
+      @keyframes loading {
+          from { transform: rotate(0turn)}
+          to {transform: rotate(1turn)}
+      }
+              </style>
+              <script>
+                  window.addEventListener("load", () => {
+                      const loader = document.querySelector(".loader");
+                      loader.classList.add("loader--hidden");
+      
+                      loader.addEventListener("trasitionend", () => {
+                          document.body.removeChild(loader);
+                      })
+                  })
+              </script>
+          </head>
+          
+          <body>
+              <div class="loader"></div>
+              <header>
+                  <a href="../../INDEX.html" class="logo">Our-ani</a>
+                  <ul>
+                      <li><a href="../../INDEX.html" class="active">Home</a></li>
+                      <li><a class="GoBack" href="../../gamespage.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                  </ul>
+              </header>
+    <section class="container">
+      <div class="result_field">
+        <div class="result_images">
+          <span class="user_result">
+            <img src="images/rock.png" alt="" />
+          </span>
+          <span class="cpu_result">
+            <img src="images/rock.png" alt="" />
+          </span>
+        </div>
+        <div class="result">Let's Play!!</div>
+      </div>
+
+      <div class="option_images">
+        <span class="option_image">
+          <img src="images/rock.png" alt="" />
+          <p>Rock</p>
+        </span>
+        <span class="option_image">
+          <img src="images/paper.png" alt="" />
+          <p>Paper</p>
+        </span>
+        <span class="option_image">
+          <img src="images/scissors.png" alt="" />
+          <p>Scissors</p>
+        </span>
+      </div>
+    </section>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

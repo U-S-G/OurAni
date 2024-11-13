@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+*
+{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    min-height: 100vh;
+    background: linear-gradient(#0040ff,#8000ff);
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+header .logo
+{
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 15px;
+    text-decoration: none;
+}
+header ul li a:hover,
+header ul .active
+{
+    color: #8000ff;
+    background: #fff;
+}
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+  }
+
+  .container {
+    background: linear-gradient(#0040ff, #8000ff);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px; /* Adjust this value to control the distance from the header */
+}S
+
+  .game-board-container {
+
+    width: 360px;
+
+    height: 400px;
+
+    position: relative;
+
+  }
+
+  .game-board-container #my-canvas {
+
+    width: 360px;
+
+    height: 400px;
+
+    background: #8000ff;
+
+  }
+
+  .btn-container {
+
+    position: relative;
+
+    width: 100vw;
+
+    height: 40vh;
+
+  }
+
+  .btn {
+
+    width: 120px;
+
+    height: 80px;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    padding: 8px 0px;
+
+    background: #8976F5;
+
+    border: none;
+
+    color: #d7d7d8;
+
+  }
+
+  .btn:nth-child(1) {
+
+    position: absolute;
+
+    top: 15vh;
+
+    left: 8vw;
+
+  }
+
+  .btn:nth-child(3) {
+
+    position: absolute;
+
+    top: 15vh;
+
+    left: 60vw;
+
+  }
+
+  .btn:nth-child(2) {
+
+    position: absolute;
+
+    top: 5vh;
+
+    left: 34vw;
+
+  }
+
+  .btn:nth-child(4) {
+
+    position: absolute;
+
+    top: 25vh;
+
+    left: 33vw;
+
+  }
+
+  .line {
+
+    width: 100vw;
+
+    height: 2px;
+
+    background: #000000;
+
+  }
+
+  #score {
+
+    position: absolute;
+
+    top: 0px;
+
+    left: 5px;
+
+    font-size: 20px;
+
+    color: #000000;
+
+    font-family: 'Courier New', Courier, monospace;
+
+    font-weight: 999;
+
+  }
+
+  #game-over {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 20px;
+
+    color: #7352FF;
+
+    font-family: 'Courier New', Courier, monospace;
+
+    font-weight: 999;
+
+    visibility: hidden;
+
+  }
+
+
+  .loader{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to top,#0040ff,transparent);
+      z-index: 100000000000000;
+      transition: opacity 0.75s, visibility 0.75s;
+  }
+  .loader--hidden{
+      opacity: 0;
+      visibility: hidden; 
+  }
+  .loader::after{
+      content: "";
+      width: 75px;
+      height: 75px;
+      border: 15px solid #ddd;
+      border-top-color: #0040ff;
+      border-radius: 50%;
+      animation: loading 0.75s ease infinite;
+  }
+  @keyframes loading {
+      from { transform: rotate(0turn)}
+      to {transform: rotate(1turn)}
+  }
