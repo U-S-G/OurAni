@@ -1,0 +1,757 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            OurAni
+        </title>
+        <link rel="Stylesheet" type="text/css" href="jjkStaff.css">
+    </head>
+    <style>
+        .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top,#0040ff,transparent);
+            z-index: 100000000000000;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+        .loader--hidden{
+            opacity: 0;
+            visibility: hidden; 
+        }
+        .loader::after{
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #ddd;
+            border-top-color: #0040ff;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+        @keyframes loading {
+            from { transform: rotate(0turn)}
+            to {transform: rotate(1turn)}
+        }
+                </style>
+                <script>
+                    window.addEventListener("load", () => {
+                        const loader = document.querySelector(".loader");
+                        loader.classList.add("loader--hidden");
+        
+                        loader.addEventListener("trasitionend", () => {
+                            document.body.removeChild(loader);
+                        })
+                    })
+                </script>
+            </head>
+            
+            <body>
+                <div class="loader"></div>
+        <header>
+            <a href="../../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../../INDEX.html" class="active">Home</a></li>
+            </ul>
+        </header>
+
+        <section>
+            <img src="Voice.jfif">
+            <a href="#" class="link">voice actors</a> 
+        </section> 
+
+        <div class="sec list-container">
+            <li><a href="#Voice">Characters/voice</a></li>
+            <li><a href="#Staff">staff</a></li>
+        </div>
+        <div class="sec">
+            <h2>Characters/voice</h2>
+            <div class="break"></div>
+            <div class="content-container" id="Voice">
+                <h3>Zenin, Naobito</h3>
+                <img src="Pictures/Naobito.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Jouji Nakata</li>
+                    <li>English: Kyle Hebert</li>
+                    <li>Portuguese (BR): Guilherme Lopes</li>
+                    <li>French: Marc Bretonnière</li>
+                    <li>Italian: Marco Balbi</li>
+                    <li>Spanish: Rubén León</li>
+                    </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Zenin, Maki</h3>
+                <img src="pictures/Maki.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Mikako Komatsu</li>
+                    <li>English: Allegra Clark</li>
+                    <li>Portuguese (BR): Natali Pazete</li>
+                    <li>French: Audrey Sourdive / Anna Lauzeray Gishi</li>
+                    <li>Italian: Elisa Giorgio</li>
+                    <li>Spanish: Anette Ugalde</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Zenin, Mai</h3>
+                <img src="pictures/Mai.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Marina Inoue</li>
+                    <li>English: Laura Post</li>
+                    <li>Portuguese (BR): Raquel Masuet</li>
+                    <li>French: Bérangère Rochet</li>
+                    <li>Italian: Martina Tamburello</li>
+                    <li>Spanish: Casandra Acevedo</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Yoshino, Junpei</h3>
+                <img src="pictures/Junpei.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Yoshitaka Yamaya</li>
+                    <li>English: Nicolas Roye</li>
+                    <li>Portuguese (BR): Hugo Myara</li>
+                    <li>French: Rémi Gutton</li>
+                    <li>Italian: Tamburrini, Sebastiano</li>
+                    <li>Spanish: Piedra, José Luis</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Yaga, Masamichi</h3>
+                <img src="pictures/Masamichi.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Takaya Kuroda</li>
+                    <li>English: Keith Silverstein</li>
+                    <li>Portuguese (BR): Gutemberg Barros</li>
+                    <li>French: Frédéric Souterelle</li>
+                    <li>Italian: Luca Semeraro</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Tsukumo, Yuki</h3>
+                <img src="pictures/Yuki.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Noriko Hidaka</li>
+                    <li>English: Anjali Kunapaneni</li>
+                    <li>Portuguese (BR): Amanda Manso</li>
+                    <li>French: Mélanie Anne Paillié</li>
+                    <li>Italian: Chiara Francese</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Toudou, Aoi</h3>
+                <img src="pictures/Aoi.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Subaru Kimura</li>
+                    <li>English: Xander Mobus</li>
+                    <li>Portuguese (BR): Filipe Albuquerque</li>
+                    <li>French: Jérémy Zylberberg / Jessie Lambotte</li>
+                    <li>German: Daniel Welbat</li>
+                    <li>Italian: Davide Fazio</li>
+                    <li>Spanish: Joel Gómez Jiménez / Carlos Mireles</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Miwa, Kasumi</h3>
+                <img src="pictures/Kasumi.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Chinatsu Akasaki</li>
+                    <li>English: Allegra Clark</li>
+                    <li>Spanish: Romina Marroquín Payró</li>
+                    <li>French: Cindy Lemineur</li>
+                    <li>German: Julia Meynen</li>
+                    <li>Portuguese (BR): Helena Palomanes</li>
+                    <li>Italian: Giulia Bersani</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Mei Mei</h3>
+                <img src="pictures/Mei Mei.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Kotono Mitsuishi</li>
+                    <li>English: Amber Lee Connors</li>
+                    <li>French: Sophie Planet</li>
+                    <li>Portuguese (BR): Angélica Borges</li>
+                    <li>Spanish: Azucena Valadez</li>
+                    <li>Italian: Valentina Pollani</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Mahito</h3>
+                <img src="pictures/Mahito.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Nobunaga Shimazaki</li>
+                    <li>English: Lucien Dodge</li>
+                    <li>Portuguese (BR): Leonardo Santhos</li>
+                    <li>Spanish: Ricardo Bautista</li>
+                    <li>German: Dirk Stollberg</li>
+                    <li>French: Yoann Sover</li>
+                    <li>Italian: Marcello Gobbi</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Kamo, Noritoshi</h3>
+                <img src="pictures/Noritoshi.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Satoshi Hino</li>
+                    <li>English: Landon McDonald</li>
+                    <li>Portuguese (BR): Francisco Quintiliano</li>
+                    <li>French: Alexandre Gillet / Gatto, Cécile</li>
+                    <li>German: Tim Knauer</li>
+                    <li>Italian: Andrea La Greca</li>
+                    <li>Spanish: Becerril, Diego / Domínguez Pineda, Carlos</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Jougo</h3>
+                <img src="pictures/Jougo.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Shigeru Chiba</li>
+                    <li>English: Michael Sorich</li>
+                    <li>Spanish: Alfonso Obregón</li>
+                    <li>French: Gilbert Lévy</li>
+                    <li>Portuguese (BR): Ricardo Rossatto</li>
+                    <li>Italian: Massimiliano Lotti</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Itadori, Wasuke</h3>
+                <img src="pictures/Wasuke.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>French: Gérard Surugue</li>
+                    <li>Portuguese (BR): Reinaldo Pimenta</li>
+                    <li>Japanese: Shigeru Chiba</li>
+                    <li>Italian: Raffaele Fallica</li>
+                    <li>Spanish: Paco Mauri</li>
+                    <li>English: Kyle Hebert</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Ino, Takuma</h3>
+                <img src="pictures/Takuma.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Yuu Hayashi</li>
+                    <li>English: Lucien Dodge</li>
+                    <li>French: Jean-Pierre Leblan</li>
+                    <li>Portuguese (BR): Pablo Argôllo</li>
+                    <li>Italian: Giuseppe Palasciano</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Iori, Utahime</h3>
+                <img src="pictures/Iori, Utahime.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Youko Hikasa</li>
+                    <li>English: Tara Sands</li>
+                    <li>French: Anaïs Delva</li>
+                    <li>Spanish: Gaby Gris</li>
+                    <li>German: Ann Vielhaben</li>
+                    <li>Portuguese (BR): Mariana Torres</li>
+                    <li>Italian: Ilaria Silvestri</li>
+                    </ul>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Ijichi, Kiyotaka</h3>
+                <img src="pictures/Kiyotaka.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Mitsuo Iwata</li>
+                    <li>English: Chris Tergliafera</li>
+                    <li>Portuguese (BR): Sérgio Stern</li>
+                    <li>French: Benjamin Pascal</li>
+                    <li>Italian: Francesco Mei</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Inumaki, Toge</h3>
+                <img src="pictures/Toge.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Kouki Uchiyama</li>
+                    <li>English: Xander Mobus</li>
+                    <li>Portuguese (BR): Erick Bougleux</li>
+                    <li>French: Arnaud Laurent</li>
+                    <li>Italian: Stefano Pozzi</li>
+                    <li>Spanish: Ángel Iván Rodríguez Ramírez</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Ieiri, Shouko</h3>
+                <img src="pictures/Shouko.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Aya Endou</li>
+                    <li>English: Ryan Bartley</li>
+                    <li>French: Marie Nonnenmacher</li>
+                    <li>Portuguese (BR): Aline Ghezzi</li>
+                    <li>Italian: Angela Ricciardi</li>
+                    <li>Spanish: Elena Torres</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Hanami</h3>
+                <img src="pictures/Hanami.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Atsuko Tanaka</li>
+                    <li>French: Jessie Lambotte</li>
+                    <li>Portuguese (BR): Tonia Mesquita</li>
+                    <li>Spanish: Sébastien Minéo</li>
+                    <li>English: Marie Westbrook</li>
+                    <li>Italian: Marina Thovez</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Getou, Suguru</h3>
+                <img src="pictures/Suguru.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Takahiro Sakurai</li>
+                    <li>English: Lex Lang</li>
+                    <li>Spanish: Christian Strempler</li>
+                    <li>French: Martial Le Minoux</li>
+                    <li>Italian: Omar Maestroni</li>
+                    <li>Portuguese (BR): Wesley Santana</li>
+                    <li>German: Matthias Deutelmoser</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Fushiguro, Tsumiki</h3>
+                <img src="pictures/Tsumiki.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>French: Justine Berger</li>
+                    <li>Portuguese (BR): Tonia Mesquita</li>
+                    <li>Japanese: Saori Hayami</li>
+                    <li>Spanish: Ivett Toriz</li>
+                    <li>Italian: Federica Simonelli</li>
+                    <li>English: Suzie Yeung</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Esou</h3>
+                <img src="pictures/Esou.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Nobuyuki Hiyama</li>
+                    <li>French: Bruno Magne</li>
+                    <li>Portuguese (BR): Marcelo Sandryni</li>
+                    <li>English: Landon McDonald</li>
+                    <li>Spanish: Bardo Miranda</li>
+                    <li>Italian: Alessandro Lussiana</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Chousou</h3>
+                <img src="pictures/Choso.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Daisuke Namikawa</li>
+                    <li>Portuguese (BR): Fernando Sierpe</li>
+                    <li>French: Stéphane Ronchewski</li>
+                    <li>Spanish: Fabián Rétiz García</li>
+                    <li>Italian: Ezio Vivolo</li>
+                    <li>English: Ray Chase</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Yuji Itadori</h3>
+                <img src="pictures/Yuji.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Enoki, Junya</li>
+                    <li>Portuguese (BR): Tupper, Yuri</li>
+                    <li>Italian: Sansalone, Dario</li>
+                    <li>Spanish: Fortuny, Enzo</li>
+                    <li>English: McArthur, Adam</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Nobara Kugisaki</h3>
+                <img src="pictures/Nobara.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Asami Seto</li>
+                    <li>Portuguese (BR): Amanda Tavares</li>
+                    <li>Italian: Cherubelli, Laura</li>
+                    <li>Spanish: Rivera, Ayari</li>
+                    <li>English: Yatco, Anne</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Gojo Satoru</h3>
+                <img src="pictures/Satoru.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Yuichi Nakamura</li>
+                    <li>English: Kaiji Tang</li>
+                    <li>Portuguese (BR): Rabelo, Leonardo</li>
+                    <li>French: Lesser, Mark</li>
+                    <li>Italian: Fumagalli, Davide</li>
+                    <li>Spanish: Vilchis, José Gilberto</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Fushiguro, Megumi</h3>
+                <img src="pictures/Megumi.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Yuuma Uchida</li>
+                    <li>English: Daymond, Robbie</li>
+                    <li>Portuguese (BR): Vila Verde, Fabrício</li>
+                    <li>French: Dussaut, Nicolas</li>
+                    <li>Italian: Paglionico, Cristiano</li>
+                    <li>Spanish: Ruiz, Víctor</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Nanami, Kento</h3>
+                <img src="pictures/Kento.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Kenjirou Tsuda</li>
+                    <li>English: David Vincent</li>
+                    <li>German: Oliver Feld</li>
+                    <li>Portuguese (BR): Nizo Neto</li>
+                    <li>French: Constantin Pappas</li>
+                    <li>Spanish: Carlos Hernández</li>
+                    <li>Italian: Ruggero Andreozzi</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Okkotsu, Yuta</h3>
+                <img src="pictures/yuta.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Junya Enoki</li>
+                    <li>English: Ryan Bartley</li>
+                    <li>Portuguese (BR): Pedro Volpato</li>
+                    <li>French: Julien Chatelet</li>
+                    <li>Italian: Ruggero Andreozzi</li>
+                    <li>Spanish: Miguel de León</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Rika Orimoto</h3>
+                <img src="pictures/Orimoto.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Ayumi Mano</li>
+                    <li>English: Kayli Mills</li>
+                    <li>Portuguese (BR): Fernanda Crispim</li>
+                    <li>French: Claire Baradat</li>
+                    <li>Italian: Beatrice Caggiula</li>
+                    <li>Spanish: Claudia Urbán</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Nishimiya, Momo </h3>
+                <img src="pictures/Momo.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Rie Kugimiya</li>
+                    <li>English: Tara Sands</li>
+                    <li>French: Valérie Bachère</li>
+                    <li>Spanish: Montserrat Aguilar</li>
+                    <li>German: Charlotte Uhlig</li>
+                    <li>Portuguese (BR): Bruna Laynes</li>
+                    <li>Italian: Giulia Maniglio</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Fushiguro, Toji</h3>
+                <img src="pictures/Toji.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Takehito Koyasu</li>
+                    <li>English: Nicolas Roye</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Panda</h3>
+                <img src="pictures/Panda.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Tomokazu Seki</li>
+                    <li>English: Matthew David Rudd</li>
+                    <li>Portuguese (BR): Borgerth, Eduardo</li>
+                    <li>French: Bédrune, Jérémie</li>
+                    <li>Italian: Brusamonti, Matteo</li>
+                    <li>Spanish: Cuevas, Roberto</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3> Ryoumen, Sukuna</h3>
+                <img src="pictures/Sukuna.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Suwabe, Junichi</li>
+                    <li>English: Chase, Ray</li>
+                    <li>Portuguese (BR): Júnior, Francisco</li>
+                    <li>French: Mendiant, Charles</li>
+                    <li>Italian: Bressan, Mattia</li>
+                    <li>Spanish: Trejo Rodríguez, Osvaldo</li>
+                </ul>
+            </div>
+            
+
+            <div class="break"></div>
+            <div class="break"></div>
+
+            <h2 id="Staff">Staff</h2>
+            <div class="break"></div>
+
+                <div class="peeps">
+                    <ul>
+                        <li>Kimura, Makoto (Producer)</li>
+                        <li>Maeda, Toshihiro (Producer)</li>
+                        <li>Matsutani, Hiroaki (Producer)</li>
+                        <li>Murai, Yuriha (Producer)</li>
+                        <li>Seshimo, Keisuke (Producer, Production Coordination)</li>
+                        <li>Park, Seong-Hu (Director, Episode Director, Storyboard, Key Animation)</li>
+                        <li>Fujita, Akiko (Sound Director)</li>
+                        <li>Goshozono, Shouta (Episode Director, Storyboard, Key Animation)</li>
+                        <li>Nagasoe, Masatsugu (Episode Director, Storyboard, Editing)</li>
+                        <li>Nakayama, Ryuu (Episode Director, Storyboard, 2nd Key Animation, Key Animation)</li>
+                        <li>Nakazono, Masato (Episode Director, Storyboard, Key Animation)</li>
+                        <li>Nishizawa, Chie (Episode Director, Animation Director, Key Animation)</li>
+                        <li>Osada, Eri (Episode Director, Storyboard, Key Animation, Animation Director, Chief Animation Director)</li>
+                        <li>Takada, Yousuke (Episode Director, Animation Director, Assistant Animation Director, Key Animation, Character Design)</li>
+                        <li>Takahashi, Ken (Episode Director, Storyboard, Key Animation)</li>
+                        <li>Takeshita, Ryouhei (Episode Director, Storyboard)</li>
+                        <li>Tanaka, Hironori (Episode Director, Storyboard, Animation Director, Key Animation)</li>
+                        <li>Umemoto, Yui (Episode Director, Assistant Director)</li>
+                        <li>Yamashita, Shingo (Episode Director, Storyboard, Animation Director, Editing, Director of Photography)</li>
+                        <li>Seko, Hiroshi (Script, Series Composition)</li>
+                        <li>Andou, Hiroaki (Storyboard)</li>
+                        <li>Hirakawa, Tetsuo (Storyboard)</li>
+                        <li>Hiramatsu, Tadashi (Storyboard, Character Design, Chief Animation Director)</li>
+                        <li>Kawajiri, Yoshiaki (Storyboard)</li>
+                        <li>Kizaki, Fuminori (Storyboard)</li>
+                        <li>Ooshiro, Miyuki (Storyboard)</li>
+                        <li>Shikama, Takahiro (Storyboard)</li>
+                        <li>ALI (Theme Song Performance)</li>
+                        <li>Cö shu Nie (Theme Song Performance)</li>
+                        <li>Eve (Theme Song Performance, Theme Song Composition, Theme Song Lyrics)</li>
+                        <li>Numanou, Tomoki (Theme Song Arrangement)</li>
+                        <li>Who-ya Extended (Theme Song Performance)</li>
+                        <li>Acevedo, Patricia (ADR Director)</li>
+                        <li>Aizu, Satsuki (Animation Director, 2nd Key Animation, Key Animation)</li>
+                        <li>Akagi, Hisako (Art Director)</li>
+                        <li>Akutami, Gege (Original Creator)</li>
+                        <li>Anne Paillié, Mélanie (ADR Director)</li>
+                        <li>Bahi JD (Key Animation)</li>
+                        <li>Brusamonti, Matteo (ADR Director)</li>
+                        <li>Chida, Takafumi (2nd Key Animation)</li>
+                        <li>Cooper, Vincent (Key Animation)</li>
+                        <li>Dawn-Claude, René (ADR Director)</li>
+                        <li>Faure, Benjamin (Key Animation)</li>
+                        <li>Fujimoto, Kouki (Key Animation)</li>
+                        <li>Fujio, Akifumi (Executive Producer)</li>
+                        <li>Fukuda, Yuuki (Key Animation)</li>
+                        <li>Harisaki, Yoshihito (Background Art)</li>
+                        <li>Haryuu, Katsufumi (Background Art)</li>
+                        <li>Hasegawa, Saki (In-Between Animation, Key Animation, 2nd Key Animation, Animation Director)</li>
+                        <li>Hashimoto, Haruna (Key Animation)</li>
+                        <li>Hashimoto, Takashi (Key Animation)</li>
+                        <li>Hieda, Susumu (Executive Producer)</li>
+                        <li>Homura, Minori (2nd Key Animation)</li>
+                        <li>Hosogoe, Yuuji (Animation Director, Key Animation, Character Design)</li>
+                        <li>Hung, Fei (Key Animation)</li>
+                        <li>Ideue, Yoshihide (Assistant Animation Director, Animation Director, 2nd Key Animation, Key Animation)</li>
+                        <li>Igarashi, Yuuki (Key Animation, Animation Director)</li>
+                        <li>Igarashi, Tomomi (2nd Key Animation, Key Animation)</li>
+                        <li>Igawa, Rena (Animation Director, In-Between Animation, Key Animation, 2nd Key Animation)</li>
+                        <li>Ishida, Keiichi (2nd Key Animation)</li>
+                        <li>Ishige, Rie (Animation Director)</li>
+                        <li>Ishii, Yumi (Production Manager)</li>
+                        <li>Ishitsuka, Sora (2nd Key Animation)</li>
+                        <li>Isuta (Key Animation)</li>
+                        <li>Itou, Teppei (Director of Photography)</li>
+                        <li>Iwazawa, Tooru (Key Animation)</li>
+                        <li>Kamata, Chikako (Color Design)</li>
+                        <li>Katayama, Tatsuhiko (Associate Producer)</li>
+                        <li>Kikuchi, Kasumi (Key Animation, 2nd Key Animation)</li>
+                        <li>Kim, Jeong-Ryeon (Background Art, Art Director)</li>
+                        <li>Kimura, Satoshi (Key Animation)</li>
+                        <li>Kitajima, Yuuki (2nd Key Animation)</li>
+                        <li>Kitamura, Shinya (Animation Director, Assistant Animation Director)</li>
+                        <li>Kiyota, Chiho (2nd Key Animation)</li>
+                        <li>Koiso, Sayaka (Assistant Animation Director, 2nd Key Animation, Chief Animation Director, Key Animation)</li>
+                        <li>Komatsu, Eiji (Key Animation)</li>
+                        <li>Kubo, Tooru (Associate Producer)</li>
+                        <li>Kumada, Akiko (2nd Key Animation, Key Animation, Assistant Animation Director)</li>
+                        <li>Kurosaki, Hayato (Key Animation)</li>
+                        <li>Lee, William (Key Animation)</li>
+                        <li>Maesawa, Hiromi (Assistant Animation Director, Key Animation, Animation Director)</li>
+                        <li>Mao, Yingxing (2nd Key Animation)</li>
+                        <li>Masaki, Yuuta (Key Animation)</li>
+                        <li>Moaang (Animation Director, Key Animation)</li>
+                        <li>Mori, Keisuke (Key Animation)</li>
+                        <li>Myoun (Key Animation)</li>
+                        <li>Nakaji, Asuka (Key Animation)</li>
+                        <li>Nakamura, Yoshiko (2nd Key Animation)</li>
+                        <li>Naminoue, Yuri (Key Animation)</li>
+                        <li>Nishii, Terumi (Chief Animation Director)</li>
+                        <li>Nishikawa, Masato (Key Animation)</li>
+                        <li>Nishino, Rie (Key Animation)</li>
+                        <li>Noma, Chikako (Key Animation)</li>
+                        <li>Okehazama, Alisa (Music)</li>
+                        <li>Okimura, Tadayoshi (Key Animation)</li>
+                        <li>Onodera, Ren (Key Animation)</li>
+                        <li>Onsen, Nakaya (Key Animation)</li>
+                        <li>Ooi, Shou (2nd Key Animation)</li>
+                        <li>Ozawa, Kazunori (Key Animation)</li>
+                        <li>Sakiguchi, Saori (Assistant Animation Director, Animation Director, Key Animation)</li>
+                        <li>Sano, Takayuki (Assistant Animation Director, Key Animation, Animation Director)</li>
+                        <li>Santhos, Leonardo (ADR Director)</li>
+                        <li>Sasaki, Mamoru (Key Animation, Animation Director, 2nd Key Animation)</li>
+                        <li>Satou, Ayaka (2nd Key Animation, Assistant Animation Director, Key Animation)</li>
+                        <li>Satou, Toshiyuki (Key Animation)</li>
+                        <li>Saucelot (Key Animation)</li>
+                        <li>Sekine, Yuzuki (2nd Key Animation)</li>
+                        <li>Shi, Juansheng (Key Animation)</li>
+                        <li>Shibata, Katsunori (Key Animation)</li>
+                        <li>Shimizu, Takako (Chief Animation Director, Animation Director, Key Animation)</li>
+                        <li>Sudou, Yumiko (Background Art)</li>
+                        <li>Sugita, Shuu (Key Animation)</li>
+                        <li>Sunaga, Masahiro (Key Animation)</li>
+                        <li>Takeda, Yuusuke (Art Director)</li>
+                        <li>Tanabe, Kana (Special Effects)</li>
+                        <li>Tanaka, Moe (2nd Key Animation)</li>
+                        <li>Terui, Yoshimasa (Music)</li>
+                        <li>Tokuda, Hirotaka (Key Animation)</li>
+                        <li>Tokura, Norimoto (Key Animation)</li>
+                        <li>Tomita, Yoshikazu (Key Animation)</li>
+                        <li>Tozawa, Yuuki (Color Setting)</li>
+                        <li>Tsai, Mengsu (Key Animation)</li>
+                        <li>Tsutsumi, Hiroaki (Music)</li>
+                        <li>Uno, Kanta (Production Manager)</li>
+                        <li>Vercreek (Key Animation)</li>
+                        <li>Washida, Toshiya (Key Animation)</li>
+                        <li>Watanabe, Keiichirou (Key Animation)</li>
+                        <li>Yajima, Yousuke (Animation Director, Assistant Animation Director)</li>
+                        <li>Yamamoto, Momo (2nd Key Animation)</li>
+                        <li>Yamamoto, Ken (Key Animation)</li>
+                        <li>Yamanaka, Kazutaka (Executive Producer)</li>
+                        <li>Yamanashi, Eri (Background Art)</li>
+                        <li>Yamashita, Yuuki (Key Animation)</li>
+                        <li>Yamazaki, Souta (Key Animation)</li>
+                        <li>Yanagi, Keisuke (Editing)</li>
+                        <li>Yoshihara, Tatsuya (Key Animation)</li>
+                        <li>Zhang, Weilin (Key Animation)</li>
+                        <li>Thoenes, Christoph (Key Animation)</li>
+                        
+
+
+                    </ul>
+                </div>
+        </div>
+
+  </body>
+</html>
+    
