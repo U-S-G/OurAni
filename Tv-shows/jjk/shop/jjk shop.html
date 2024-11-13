@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            OurAni
+        </title>
+        <link rel="Stylesheet" type="text/css" href="jjk shop.css">
+        <style>
+            .loader{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(to top,#0040ff,transparent);
+                z-index: 100000000000000;
+                transition: opacity 0.75s, visibility 0.75s;
+            }
+            .loader--hidden{
+                opacity: 0;
+                visibility: hidden; 
+            }
+            .loader::after{
+                content: "";
+                width: 75px;
+                height: 75px;
+                border: 15px solid #ddd;
+                border-top-color: #0040ff;
+                border-radius: 50%;
+                animation: loading 0.75s ease infinite;
+            }
+            @keyframes loading {
+                from { transform: rotate(0turn)}
+                to {transform: rotate(1turn)}
+            }
+                    </style>
+                    <script>
+                        window.addEventListener("load", () => {
+                            const loader = document.querySelector(".loader");
+                            loader.classList.add("loader--hidden");
+            
+                            loader.addEventListener("trasitionend", () => {
+                                document.body.removeChild(loader);
+                            })
+                        })
+                    </script>
+                </head>
+                
+                <body>
+                    <div class="loader"></div>
+        <header>
+            <a href="../../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../../INDEX.html" class="active">Home</a></li>
+            </ul>
+        </header>
+
+        <section>
+            <img src="banner.png">
+        </section>
+
+        <div class="sec">
+            <h2><u>JJK-Shop</u></h2>
+                <!--<a href="Tv-shows/attack-on-titan/Attack-on-titan.html"><img src="images/TvShows images/Attack-on-titan.jfif" class="AOT"></a>
+            <a href="Tv-shows/demon-slayer/Demon slayer.html"><img src="images/TvShows images/Demon-slayer.jfif" class="DS"></a>
+            <a href="Tv-shows/chainsaw-man/Chainsaw man.html"><img src="images/TvShows images/Chainsaw-man.jpg" class="CSM"></a>
+            <a href="Tv-shows/Zom-100/Zom 100.html"><img src="images/TvShows images/ZOM-100.jfif" class="ZOM"></a>
+            <a href="Tv-shows/Oshi-no-ko/Oshi no ko.html"><img src="images/TvShows images/oshi-no-ko.jpg" class="OSNK"></a>
+            <a href="Tv-shows/jjk/Jujustu kaisan.html"><img src="images/TvShows images/Jujustu-kaisen.jfif" class="JJK"></a>
+                -->
+                COMING SOON
+        </div>
+
+
+
+
+
+    </body>
+
+</html>
