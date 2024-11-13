@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OurAni</title>
+        <link rel="stylesheet" type="text/css" href="gamespage.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top,#0040ff,transparent);
+            z-index: 100000000000000;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+        .loader--hidden{
+            opacity: 0;
+            visibility: hidden; 
+        }
+        .loader::after{
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #ddd;
+            border-top-color: #0040ff;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+        @keyframes loading {
+            from { transform: rotate(0turn)}
+            to {transform: rotate(1turn)}
+        }
+                </style>
+                <script>
+                    window.addEventListener("load", () => {
+                        const loader = document.querySelector(".loader");
+                        loader.classList.add("loader--hidden");
+        
+                        loader.addEventListener("trasitionend", () => {
+                            document.body.removeChild(loader);
+                        })
+                    })
+                </script>
+            </head>
+            
+            <body>
+                <div class="loader"></div>
+                <header>
+                    <a href="INDEX.html" class="logo">Our-ani</a>
+                    <ul>
+                        <li><a href="INDEX.html" class="active">Home</a></li>
+                        <li><a class="GoBack" href="INDEX.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                    </ul>
+                </header>
+
+                <div class="card-container">
+                    <!--Game 1-->
+                    <div class="card">
+                        <img src="Games/X-O.jpg">
+                        <div class="card-content">
+                            <h3>Tic-Tac-Toe</h3>
+                        <a href="Games/Tick tak toe/tic-tac-toe.html" class="btn">Play</a>
+                        </div>
+                        </div>
+                    <!--Game 2-->
+                    <div class="card">
+                        <img src="Games/Snake.jfif">
+                        <div class="card-content">
+                            <h3>snakegame</h3>
+                            <a href="Games/Snake game/snakegame.html" class="btn">Play</a>    
+                        </div>
+                         </div>
+                    <!--Game 3-->
+                    <div class="card">
+                        <img src="Games/memory game.jfif">
+                        <div class="card-content">
+                            <h3>memorygame</h3>
+                            <a href="Games/memory/memorygame.html" class="btn">Play</a>    
+                        </div>
+                         </div>
+                    <!--Game 4-->
+                    <div class="card">
+                        <img src="Games/hangman game.jpg">
+                        <div class="card-content">
+                            <h3>hangman</h3>
+                            <a href="Games/hangman/hangman.html" class="btn">Play</a>
+                        </div>
+                         </div>
+                    <!--Game 5-->
+                    <div class="card">
+                        <img src="Games/Piano game.jfif">
+                        <div class="card-content">
+                            <h3>Piano</h3>
+                            <a href="Games/Piano/Piano.html" class="btn">Play</a>
+                        </div>
+                         </div>
+                    <!--Game 6-->
+                    <div class="card">
+                        <img src="Games/WTC.jpg">
+                        <div class="card-content">
+                            <h3>Who's that character?</h3>
+                            <a href="Games/Who's That Character/index.html" class="btn">Play</a>
+                        </div>
+                         </div>
+                         <!--Game 7-->
+                    <div class="card">
+                        <img src="Games/RPS.jfif">
+                        <div class="card-content">
+                            <h3>Rock paper scissors</h3>
+                            <a href="Games/Rock Paper Scissors/index.html" class="btn">Play</a>
+                        </div>
+                         </div>
+                </div>
+        
+    </body>
+</html>
