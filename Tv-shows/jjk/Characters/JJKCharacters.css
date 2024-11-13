@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+*
+*,
+*::after,
+*::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    background: linear-gradient(#0040ff,#8000ff);
+}
+header 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo
+{
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 15px;
+    text-decoration: none;
+}
+header ul li a:hover,
+header ul .active
+{
+    color: #8000ff;
+    background: #fff;
+}
+.container
+{
+    width: 80%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+}
+@media only screen and (max-width:780px)
+{
+    .container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.card
+{
+    width: 270px;
+    height: 370px;
+    margin: 15px;
+    perspective: 1000px;
+    font-family: 'poppins', sans-serif;
+    border-radius: 10px;
+}
+.card_inner
+{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s linear;
+    border-radius: 10px;
+}
+.face
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: whitesmoke;
+    border-radius: 10px;
+}
+.back
+{
+    background: center;
+    overflow: hidden;
+    z-index: -1;
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+}
+.back::before
+{
+    content: "";
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    box-sizing: 100% 100%;
+
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+.front, 
+.back
+{
+    transition: all .5s linear;
+}
+.front 
+{
+    background: url(BACK.jpg);
+    background-size: cover;
+    z-index: 1;
+    box-shadow: 5px 5px 5px #000a65;
+}
+.heading
+{
+    width: 100%;
+    background: #004e92;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+}
+.description
+{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-style: italic;
+
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background-image: url(back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 15s linear infinite;
+}
+@keyframes back{
+	100%{
+		background-position: 2000px 0;
+	}
+}
+
+.h3
+{
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(249, 249, 249);
+}
+.back
+{
+    background-size: cover;
+    box-shadow: 0 0 0 #000a65;
+}
+li
+{
+    margin-top: 15px;
+    color: rgb(201, 201, 201);
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    font-style: oblique;
+}
+.container li
+{
+    color: white;
+    text-shadow: -1px -1px 0 black,  
+                  1px -1px 0 black,
+                 -1px  1px 0 black,
+                  1px  1px 0 black;
+}
+.Character
+{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    border: 0 0 10px 10px;
+    padding: 15px;
+    color: #e7e7e7;
+    text-shadow: -1px -1px 0 rgb(38, 0, 255),  
+                    1px -1px 0 rgb(38, 0, 255),
+                     -1px  1px 0 rgb(0, 13, 255),
+                     1px  1px 0 rgb(38, 0, 255);
+}
+.card_inner.flipped {
+    transform: rotateY(180deg);
+}
+.break{
+    width: 100%;
+    height: 5px;
+    background-color: aqua;
+}
+.break h1
+{
+    margin: 100px auto;
+    font: 5px;
+    color: #ffffff;
+    width: 10px;
+}
+
+/* Charaters */
+/*//////////////////////////////////////////female//////////////////////// */
+.Fujinuma
+{
+    background-image: url(Characters/Females/Fujinuma.jpg);
+}
+.Kasumi
+{
+    background-image: url(Characters/Females/Kasumi.webp);
+}
+.Mai
+{
+    background-image: url(Characters/Females/Mai.webp);
+}
+.Maki
+{
+    background-image: url(Characters/Females/Maki.webp);
+}
+.Akari
+{
+    background-image: url(Characters/Females/Akari.jpg);
+}
+.Mei
+{
+    background-image: url(Characters/Females/Mei.webp);
+}
+.Mimiko
+{
+    background-image: url(Characters/Females/Mimiko.jpg);
+}
+.Misato
+{
+    background-image: url(Characters/Females/Misato.webp);
+}
+.Momo
+{
+    background-image: url(Characters/Females/momo.jpg);
+}
+.Yuko
+{
+    background-image: url(Characters/Females/Yuko.webp);
+}
+.Nanako
+{
+    background-image: url(Characters/Females/Nanako.webp);
+}
+.Yuki
+{
+    background-image: url(Characters/Females/Yuki.webp);
+}
+.Nobara
+{
+    background-image: url(Characters/Females/Nobara.webp);
+}
+.Utahime
+{
+    background-image: url(Characters/Females/Utahime.jpg);
+}
+.Shoko
+{
+    background-image: url(Characters/Females/Shoko.jpg);
+}
+.Manami
+{
+    background-image: url(Characters/Females/Manami.jfif);
+}
+.Setsuko
+{
+    background-image: url(Characters/Females/Setsuko.jfif);
+}
+.Riko
+{
+    background-image: url(Characters/Females/Riko.webp);
+}
+.Ogami
+{
+    background-image: url(Characters/Females/Ogami.webp);
+}
+.Saki
+{
+    background-image: url(Characters/Females/Saki.webp);
+}
+.Rika
+{
+    background-image: url(Characters/Females/Rika.jpg);
+}
+/*////////////////////////////Male////////////////////////////////////// */
+.Gojo
+{
+    background-image: url(Characters/Males/Gojo.jpg);
+}
+.Ijichi
+{
+    background-image: url(Characters/Males/Ijichi.jpg);
+}
+.Yaga
+{
+    background-image: url(Characters/Males/Yaga.jpg);
+}
+.Kusakabe
+{
+    background-image: url(Characters/Males/Kusakabe.jpg);
+}
+.Itadori
+{
+    background-image: url(Characters/Males/Itadori.jpg);
+}
+.Sukuna
+{
+    background-image: url(Characters/Males/Sukuna.jpg);
+}
+.Naobito
+{
+    background-image: url(Characters/Males/Naobito.jpg);
+}
+.Mahito
+{
+    background-image: url(Characters/Males/Mahito.jpg);
+}
+.Jogo
+{
+    background-image: url(Characters/Males/Jogo.jpg);
+}
+.Hanami
+{
+    background-image: url(Characters/Males/Hanami.jpg);
+}
+.Dagon
+{
+    background-image: url(Characters/Males/Dagon.jpg);
+}
+.Choso
+{
+    background-image: url(Characters/Males/Choso.jpg);
+}
+.Geto
+{
+    background-image: url(Characters/Males/Geto.jpg);
+}
+.Yoshino
+{
+    background-image: url(Characters/Males/Yoshino.jpg);
+}
+.Toji
+{
+    background-image: url(Characters/Males/Toji.jpg);
+}
+.Nanami
+{
+    background-image: url(Characters/Males/Nanami.jpg);
+}
+.Noritoshi
+{
+    background-image: url(Characters/Males/Noritoshi.jpg);
+}
+.Todo
+{
+    background-image: url(Characters/Males/Todo.jpg);
+}
+.Kokichi
+{
+    background-image: url(Characters/Males/Muta.jpg);
+}
+.Yuta
+{
+    background-image: url(Characters/Males/Yuta.jpg);
+}
+.Megumi
+{
+    background-image: url(Characters/Males/Fushiguro.jpg);
+}
+.Toge
+{
+    background-image: url(Characters/Males/Inumaki.jpg);
+}
+.Panda
+{
+    background-image: url(Characters/Males/Panda.jpg);
+}
+/*different back pictures */
+/*////////////////////////////femaleS////////////////////////////////////// */
+.front.Fujinuma
+{
+    background-image: url(Characters/Females/FujinumaBack.webp);
+    background-position: center;
+}
+.front.Kasumi
+{
+    background-image: url(Characters/Females/KasumiBack.webp);
+    background-position: center;
+}
+.front.Mai
+{
+    background-image: url(Characters/Females/MaiBack.webp);
+    background-position: center;
+}
+.front.Maki
+{
+    background-image: url(Characters/Females/MakiBack.webp);
+    background-position: center;
+}
+.front.Akari
+{
+    background-image: url(Characters/Females/AkariBack.jfif);
+    background-position: center;
+}
+.front.Mei
+{
+    background-image: url(Characters/Females/MeiBack.webp);
+    background-position: center;
+}
+.front.Mimiko
+{
+    background-image: url(Characters/Females/MimikoBack.jfif);
+    background-position: center;
+}
+.front.Misato
+{
+    background-image: url(Characters/Females/MisatoBack.jfif);
+    background-position: center;
+}
+.front.Momo
+{
+    background-image: url(Characters/Females/momoBack.jpg);
+    background-position: center;
+}
+.front.Yuko 
+{
+    background-image: url(Characters/Females/YukoBack.jpg);
+    background-position: center;
+}
+.front.Nanako
+{
+    background-image: url(Characters/Females/NanakoBack.webp);
+    background-position: center;
+}
+.front.Nobara
+{
+    background-image: url(Characters/Females/NobaraBack.webp);
+    background-position: center;
+}
+.front.Yuki
+{
+    background-image: url(Characters/Females/Yuki\ Back.webp);
+    background-position: center;
+}
+.front.Utahime
+{
+    background-image: url(Characters/Females/UtahimeBack.jfif);
+    background-position: center;
+}
+.front.Shoko
+{
+    background-image: url(Characters/Females/ShokoBack.jfif);
+    background-position: center;
+}
+.front.Manami
+{
+    background-image: url(Characters/Females/ManamiBack.jfif);
+    background-position: center;
+}
+.front.Setsuko
+{
+    background-image: url(Characters/Females/SetsukoBack.jpg);
+    background-position: center;
+}
+.front.Riko
+{
+    background-image: url(Characters/Females/RikoBack.jpeg);
+    background-position: center;
+}
+.front.Ogami
+{
+    background-image: url(Characters/Females/OgamiBack.webp);
+    background-position: center;
+}
+.front.Saki
+{
+    background-image: url(Characters/Females/SakiBack.jpg);
+    background-position: center;
+}
+.front.Rika
+{
+    background-image: url(Characters/Females/rikaBack.avif);
+    background-position: left;
+}
+/*////////////Males//////////////////*/
+.front.Gojo
+{
+    background-image: url(Characters/Males/GojoBack.jpg);
+    background-position: center;
+}
+.front.Ijichi
+{
+    background-image: url(Characters/Males/IjichiBack.jpg);
+    background-position: center;
+}
+.front.Yaga
+{
+    background-image: url(Characters/Males/YagaBack.jpg);
+    background-position: center;
+}
+.front.Kusakabe
+{
+    background-image: url(Characters/Males/KusakabeBack.jpg);
+    background-position: center;
+}
+.front.Itadori
+{
+    background-image: url(Characters/Males/ItadoriBack.jpg);
+    background-position: center;
+}
+.front.Sukuna
+{
+    background-image: url(Characters/Males/SukunaBack.jpg);
+    background-position: center;
+}
+.front.Naobito
+{
+    background-image: url(Characters/Males/NaobitoBack.jpg);
+    background-position: center;
+}
+.front.Mahito
+{
+    background-image: url(Characters/Males/MahitoBack.jpg);
+    background-position: center;
+}
+.front.Jogo
+{
+    background-image: url(Characters/Males/JogoBack.jpg);
+    background-position: center;
+}
+.front.Hanami
+{
+    background-image: url(Characters/Males/HanamiBack.jpg);
+    background-position: center;
+}
+.front.Dagon
+{
+    background-image: url(Characters/Males/DagonBack.jpg);
+    background-position: center;
+}
+.front.Choso
+{
+    background-image: url(Characters/Males/ChosoBack.jpg);
+    background-position: center;
+}
+.front.Geto
+{
+    background-image: url(Characters/Males/GetoBack.jpg);
+    background-position: center;
+}
+.front.Yoshino
+{
+    background-image: url(Characters/Males/YoshinoBack.jpg);
+    background-position: center;
+}
+.front.Toji
+{
+    background-image: url(Characters/Males/TojiBack.jpg);
+    background-position: center;
+}
+.front.Nanami
+{
+    background-image: url(Characters/Males/NanamiBack.jpg);
+    background-position: center;
+}
+.front.Noritoshi
+{
+    background-image: url(Characters/Males/NoritoshiBack.jpg);
+    background-position: center;
+}
+.front.Todo
+{
+    background-image: url(Characters/Males/TodoBack.jpg);
+    background-position: center;
+}
+.front.Kokichi
+{
+    background-image: url(Characters/Males/MutaBack.jpgs);
+    background-position: center;
+}
+.front.Yuta
+{
+    background-image: url(Characters/Males/YutaBack.jpg);
+    background-position: center;
+}
+.front.Megumi
+{
+    background-image: url(Characters/Males/FushiguroBack.jpg);
+    background-position: center;
+}
+.front.Toge
+{
+    background-image: url(Characters/Males/InumakiBack.jpg);
+    background-position: center;
+}
+.front.Panda
+{
+    background-image: url(Characters/Males/PandaBack.jpg);
+    background-position: center;
+}
+/* COMING SOON CARD */
+.MORE,
+.front.more
+{
+    background-image: url(Characters/Coming\ soon.jfif);
+    background-position: center;
+}
