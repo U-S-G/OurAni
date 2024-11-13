@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            OurAni
+        </title>
+        <link rel="Stylesheet" type="text/css" href="AOT-shop.css">
+    </head>
+    <style>
+        .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top,#0040ff,transparent);
+            z-index: 100000000000000;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+        .loader--hidden{
+            opacity: 0;
+            visibility: hidden; 
+        }
+        .loader::after{
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #ddd;
+            border-top-color: #0040ff;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+        @keyframes loading {
+            from { transform: rotate(0turn)}
+            to {transform: rotate(1turn)}
+        }
+                </style>
+                <script>
+                    window.addEventListener("load", () => {
+                        const loader = document.querySelector(".loader");
+                        loader.classList.add("loader--hidden");
+        
+                        loader.addEventListener("trasitionend", () => {
+                            document.body.removeChild(loader);
+                        })
+                    })
+                </script>
+            </head>
+            
+            <body>
+                <div class="loader"></div>
+        <header>
+            <a href="../../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../../INDEX.html" class="active">Home</a></li>
+            </ul>
+        </header>
+
+        <section>
+            <div class="Slider-frame">
+                <div class="slide-images">
+                    <div class="img-container">
+                        <img src="images/banner.png"> 
+                    </div>
+                    <div class="img-container">
+                        <img src="images/banner2.jfif"> 
+                    </div>
+                    <div class="img-container">
+                        <img src="images/banner3.jfif"> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="sec">
+            <h2><u>AOT Shop</u></h2>
+                COMING SOON
+        </div>
+
+    </body>
+
+</html>

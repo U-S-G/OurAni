@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            OurAni
+        </title>
+        <link rel="stylesheet" href="Author.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top,#0040ff,transparent);
+            z-index: 100000000000000;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+        .loader--hidden{
+            opacity: 0;
+            visibility: hidden; 
+        }
+        .loader::after{
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #ddd;
+            border-top-color: #0040ff;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+        @keyframes loading {
+            from { transform: rotate(0turn)}
+            to {transform: rotate(1turn)}
+        }
+                </style>
+                <script>
+                    window.addEventListener("load", () => {
+                        const loader = document.querySelector(".loader");
+                        loader.classList.add("loader--hidden");
+        
+                        loader.addEventListener("trasitionend", () => {
+                            document.body.removeChild(loader);
+                        })
+                    })
+                </script>
+            </head>
+            
+            <body>
+                <div class="loader"></div>
+        <header>
+            <a href="../../../INDEX.html" class="logo">Our-Ani</a>
+            <ul>
+                <li><a href="../../../INDEX.html" class="active">Home</a></li>
+                <li><a class="GoBack" href="../Attack-on-titan.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            </ul>
+        </header>
+
+        <section>
+            <div class="container">
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx"><a href="#"><img src="Author.jpg"></a></div>
+                        <div class="contentBx">
+                            <h3>Hajime Isayama<br><span>Author</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <ul class="sci">
+                            <li style="--i:1">
+                                <a href="https://www.facebook.com/IsayamaHajime/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>
+                            <li style="--i:2">
+                                <a href="https://twitter.com/hajime_isayama"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li style="--i:3">
+                                <a href="https://www.instagram.com/hajime_isayamaa/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

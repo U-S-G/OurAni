@@ -1,0 +1,646 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            OurAni
+        </title>
+        <link rel="Stylesheet" type="text/css" href="Staff.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top,#0040ff,transparent);
+            z-index: 100000000000000;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+        .loader--hidden{
+            opacity: 0;
+            visibility: hidden; 
+        }
+        .loader::after{
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #ddd;
+            border-top-color: #0040ff;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+        @keyframes loading {
+            from { transform: rotate(0turn)}
+            to {transform: rotate(1turn)}
+        }
+                </style>
+                <script>
+                    window.addEventListener("load", () => {
+                        const loader = document.querySelector(".loader");
+                        loader.classList.add("loader--hidden");
+        
+                        loader.addEventListener("trasitionend", () => {
+                            document.body.removeChild(loader);
+                        })
+                    })
+                </script>
+            </head>
+            
+            <body>
+                <div class="loader"></div>
+        <header>
+            <a href="../../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../../INDEX.html" class="active">Home</a></li>
+                <li><a class="GoBack" href="../Attack-on-titan.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            </ul>
+        </header>
+
+        <section>
+            <img src="Voiceacting.jfif">
+            <a href="#" class="link">voice actors</a> 
+        </section> 
+
+        <div class="sec list-container">
+            <li><a href="#Voice">Characters/voice</a></li>
+            <li><a href="#Staff">staff</a></li>
+        </div>
+        <div class="sec">
+            <h2>Characters/voice</h2>
+            <div class="break"></div>
+            <div class="content-container" id="Voice">
+                <h3>Ackerman Mikasa</h3>
+                <img src="pictures/Mikasa.jfif"> 
+                <ul>
+                    <li></li>
+                    <li>Nishimura, Trina (English)</li>
+                    <li>Ishikawa, Yui (Japanese)</li>
+                    <li>Bienaimé, Nathalie (French)</li>
+                    <li>Han, Chae Eon (Korean)</li>
+                    <li>Perino, Elena (Italian)</li>
+                    <li>Hannak, Nicole (German)</li>
+                    <li>Stefane, Mayara (Portuguese)</li>
+                    <li>Lobo, Ana (Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+
+            <div class="content-container">
+                <h3>Arlert Armin</h3>
+                <img src="pictures/armin.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Grelle, Jessie James (English)</li>
+                    <li>Inoue, Marina (Japanese)</li>
+                    <li>Solis, Adrien (French)</li>
+                    <li>Kim, Seo Yeong (Korean)</li>
+                    <li>Bolognesi, Gaia (Italian)</li>
+                    <li>Zeiger, Christian (German)</li>
+                    <li>Volpato, Pedro (Portuguese)</li>
+                    <li>de Alba, Héctor Ireta (Spanish)</li>
+                    <li>Gómez, Marc (Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+
+            <div class="content-container">
+                <h3>Yeager, Eren</h3>
+                <img src="pictures/Eren"> 
+                <ul>
+                    <li></li>
+                    <li>Papenbrook, Bryce (English)</li>
+                    <li>Kaji, Yuuki (Japanese)</li>
+                    <li>Bourlé, Bastien (French)</li>
+                    <li>Choi, Won Hyeong (Korean)</li>
+                    <li>Campaiola, Alessandro (Italian)</li>
+                    <li>Felder, Max (German)</li>
+                    <li>Almeida, Lucas (Portuguese)</li>
+                    <li>Leal, Miguel Ángel (Spanish)</li>
+                    <li>Aguiló, Jaume(Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+
+            <div class="content-container">
+                <h3>Zoë, Hange</h3>
+                <img src="pictures/Hange.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Calvello, Jessica (English)</li>
+                    <li>Park, Romi (Japanese)</li>
+                    <li>Lambotte, Jessie (French)</li>
+                    <li>Baldini, Antonella (Italian)</li>
+                    <li>Schmidt, Josephine (German)</li>
+                    <li>Molinari, Paola (Portuguese)</li>
+                    <li>Pallarès, Pepa (Spanish)</li>
+                    <li>Aguirre, Rossy(Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>	
+                    Zacharias, Mike</h3>
+                <img src="pictures/Mike.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Douglas, Jason (English)</li>
+                    <li>Miyake, Kenta (Japanese)</li>
+                    <li>Pascal, Benjamin (French)</li>
+                    <li>Machelli, Gianluca (Italian)</li>
+                    <li>Klemm, Matti (German)</li>
+                    <li>Mazzei, Wilken (Portuguese)</li>
+                    <li>Allende, David (Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Ymir</h3>
+                <img src="pictures/Ymir.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Maxwell, Elizabeth (English)</li>
+                    <li>Fujita, Saki (Japanese)</li>
+                    <li>Jean, Bérangère (French)</li>
+                    <li>Serpelloni, Mattea (Italian)</li>
+                    <li>Vural, Esra (German)</li>
+                    <li>Morais, Ana Maria (Portuguese)</li>
+                    <li>Galindo, Alina (Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Yeager, Grisha</h3>
+                <img src="pictures/Grisha.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Hury, Chris (English)</li>
+                    <li>Tsuchida, Hiroshi (Japanese)</li>
+                    <li>Gradi, Emmanuel (French)</li>
+                    <li>Guerrieri, Vittorio (Italian)</li>
+                    <li>Röth, Frank (German)</li>
+                    <li>Moreno, Sérgio (Portuguese)</li>
+                    <li>Ballarta, Carlos(Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Yeager, Carla</h3>
+                <img src="pictures/Carla.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Cavanagh, Jessica (English)</li>
+                    <li>Takamori, Yoshino (Japanese)</li>
+                    <li>Jean, Bérangère (French)</li>
+                    <li>Di Caccamo, Irene (Italian)</li>
+                    <li>Hinze, Melanie (German)</li>
+                    <li>de Almeida, Amazyles (Portuguese)</li>
+                    <li>Hannidez, Patricia (Spanish)</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Springer, Connie</h3>
+                <img src="pictures/connie.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Chapin, Clifford(English)</li>
+                    <li>Shimono, Hiro (Japanese)</li>
+                    <li>Laisné, Grégory (French)</li>
+                    <li>Hong, Beom Gi(Korean)</li>
+                    <li>Patriarca, Gabriele (Italian)</li>
+                    <li>Jellinek, Julius(German)</li>
+                    <li>Diniz, Diego (Portuguese)</li>
+                    <li>Bernal, Alberto(Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Smith, Erwin</h3>
+                <img src="pictures/Erwin.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Tatum, J. Michael (English)</li>
+                    <li>Ono, Daisuke(Japanese)</li>
+                    <li>Seugnet, Christophe (French)</li>
+                    <li>Quarta, Alessandro (Italian)</li>
+                    <li>Flechtner, Peter (German)</li>
+                    <li>Marques, Guilherme (Portuguese)</li>
+                    <li>Rojas, Octavio (Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Shadis, Keith</h3>
+                <img src="pictures/Keith.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Seitz, Patrick (English)</li>
+                    <li>Mogami, Tsuguo (Japanese)</li>
+                    <li>Pichon, Yann (French)</li>
+                    <li>Indrio, Saverio (Italian)</li>
+                    <li>Klebsch, Klaus-Dieter (German)</li>
+                    <li>Ávila, Cassiano (Portuguese)</li>
+                    <li>Segundo, Carlos (Spanish)</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Ral, Petra</h3>
+                <img src="pictures/Petra.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Glass, Caitlin (English)</li>
+                    <li>Aikawa, Natsuki (Japanese)</li>
+                    <li>Combes, Caroline (French)</li>
+                    <li>Donati, Gemma (Italian)</li>
+                    <li>Haruno, Mari (Portuguese)</li>
+                    <li>Cruz, Pamela (Spanish)</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Pixis, Dot</h3>
+                <img src="pictures/Dot.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Elliott, R. Bruce (English)</li>
+                    <li>Tanaka, Masahiko (Japanese)</li>
+                    <li>Bretonnière, Marc (French)</li>
+                    <li>Roffi, Luciano (Italian)</li>
+                    <li>Gutmann, Elmar (German)</li>
+                    <li>Vaccari, Hélio (Portuguese)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Levi</h3>
+                <img src="pictures/Levi.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Mercer, Matthew (English)</li>
+                    <li>Kamiya, Hiroshi (Japanese)</li>
+                    <li>Méyère, Bruno (French)</li>
+                    <li>Raffaeli, Daniele (Italian)</li>
+                    <li>Halm, Florian (German)</li>
+                    <li>Sangregório, Bruno (Portuguese)</li>
+                    <li>García, Héctor (Spanish)</li>
+                    <li>Basurto, Alfredo Gabriel (Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Leonhart, Annie</h3>
+                <img src="pictures/Annie.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Landa, Lauren (English)</li>
+                    <li>Shimamura, Yuu (Japanese)</li>
+                    <li>Chemin, Pascale (French)</li>
+                    <li>Gioncardi, Chiara (Italian)</li>
+                    <li>Oeffinger, Marieke (German)</li>
+                    <li>Cunha, Maitê (Portuguese)</li>
+                    <li>Sánchez, Georgina (Spanish)</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>reiss, historia</h3>
+                <img src="pictures/historia.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Apprill, Bryn (English)</li>
+                    <li>KMikami, Shiori (Japanese)</li>
+                    <li>Combes, Caroline (French)</li>
+                    <li>Teresi, Francesca (Italian)</li>
+                    <li>Blank, Jodie (German)</li>
+                    <li>de Brito, Giulia (Portuguese)</li>
+                    <li>Hernández, Cristina (Spanish)</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Kirstein, Jean</h3>
+                <img src="pictures/Jean.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>McFarland, Mike (English)</li>
+                    <li>Taniyama, Kishou (Japanese)</li>
+                    <li>Pascal, Benjamin (French)</li>
+                    <li>Kim, Jang (Korean)</li>
+                    <li>Aquilone, Flavio (Italian)</li>
+                    <li>Dawn-Claude, René (German)</li>
+                    <li>Berro, Bernardo (Portuguese)</li>
+                    <li>Ortega, Gerardo (Spanish)</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3> Hannes</h3>
+                <img src="pictures/Hannes.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Wald, David (English)</li>
+                    <li>Fujiwara, Keij (Japanese)</li>
+                    <li>Bretonnière, Marc (French)</li>
+                    <li>Ferraro, Luigi (Italian)</li>
+                    <li>Moeseritz, Tim (German)</li>
+                    <li>Zambrano, Thiago (Portuguese)</li>
+                    <li>Delgado, Víctor (Spanish)</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Dreyse, Hitch</h3>
+                <img src="pictures/Hitch.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Karbowski, Brittney (English)</li>
+                    <li>Watanabe, Akeno (Japanese)</li>
+                    <li>Nonnenmacher, Marie (French)</li>
+                    <li>Vidali, Valeria (Italian)</li>
+                    <li>Hönig, Maria (German)</li>
+                    <li>Guarnieri, Isabella (Portuguese)</li>
+                    <li>Márquez, Rosalinda (Spanish)</li>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Brzenska, Riko</h3>
+                <img src="pictures/riko.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Garrett, Morgan (English)</li>
+                    <li>Kaiden, Michiko (Japanese)</li>
+                    <li>Baranes, Sophie(French)</li>
+                    <li>Bertolotti, Monica (Italian)</li>
+                    <li>Isakowitz, Melanie(German)</li>
+                    <li>Yamada, Juliana (Portuguese)</li>
+                    <li>Nolan, Diana (Spanish)</li>
+                </ul>
+            </div>
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Braun, Reiner</h3>
+                <img src="pictures/Reiner.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>McCollum, Robert (English)</li>
+                    <li>Hosoya, Yoshimasa (Japanese)</li>
+                    <li>BRausenberger, Emmanuel (French)</li>
+                    <li>Seong, Wan Gyeong (Korean)</li>
+                    <li>Mete, Andrea (Italian)</li>
+                    <li>Gavrilis, Marios (German)</li>
+                    <li>Silva, Dláigelles (Portuguese)</li>
+                    <li>Obregón, Alfonso (Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Bott, Marco</h3>
+                <img src="pictures/Marco.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Tindle, Austin (English)</li>
+                    <li>Oosaka, Ryouta (Japanese)</li>
+                    <li>Grull, Pascal (French)</li>
+                    <li>CGiuliani, Daniele (Italian)</li>
+                    <li>Bösherz, Konrad(German)</li>
+                    <li>Córdova, Thiago (Portuguese)</li>
+                    <li>López, Óscar (Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container">
+                <h3>Blouse, Sasha</h3>
+                <img src="pictures/sasha.jpg"> 
+                <ul>
+                    <li></li>
+                    <li>Burch, Ashly (English)</li>
+                    <li>Kobayashi, Yuu (Japanese)</li>
+                    <li>Nonnenmacher, Marie (French)</li>
+                    <li>Kim, Seon Hye (Korean)</li>
+                    <li>Favazza, Valentina (Italian)</li>
+                    <li>Mohr, Lina Rabea (German)</li>
+                    <li>Cadamuro, Ana Paula (Portuguese)</li>
+                    <li>Medel, Jennifer (Spanish)</li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            <div class="break"></div>
+
+            <h2 id="Staff">Staff</h2>
+            <div class="break"></div>
+
+                <div class="peeps">
+                    <ul>
+                        <li>Cook, Justin (Producer)</li>
+                        <li>Furukawa, Shin (Producer)</li>
+                        <li>Kinoshita, Tetsuya (Producer)</li>
+                        <li>Maeda, Toshihiro (Producer)</li>
+                        <li>Nakatake, Tetsuya (Producer)</li>
+                        <li>Tateishi, Kensuke (Producer)</li>
+                        <li>Wada, Jouji (Producer)</li>
+                        <li>Araki, Tetsurou (Director, Episode Director, Storyboard)</li>
+                        <li>Mima, Masafumi (Sound Director)</li>
+                        <li>Bessho, Makoto (Episode Director, Storyboard, Key Animation)</li>
+                        <li>Ezaki, Shinpei (Episode Director, Storyboard)</li>
+                        <li>Fujiwara, Yoshiyuki (Episode Director, Key Animation)</li>
+                        <li>Fukumoto, Kiyoshi (Episode Director)</li>
+                        <li>Ikeda, Tomomi (Episode Director)</li>
+                        <li>Ishihama, Masashi (Episode Director, Storyboard, Key Animation, Animation Director)</li>
+                        <li>Itoga, Shintaro (Episode Director)</li>
+                        <li>Koizuka, Masashi (Episode Director, Storyboard, Assistant Director, Character Design, Chief Animation Director, Key Animation)</li>
+                        <li>Minamikawa, Tatsuma (Episode Director, Assistant Director)</li>
+                        <li>Tachikawa, Yuzuru (Episode Director, Storyboard)</li>
+                        <li>Tanaka, Hiroyuki (Episode Director, Assistant Director)</li>
+                        <li>Tokudo, Daisuke (Episode Director, Storyboard, Key Animation)</li>
+                        <li>Wakabayashi, Shin (Episode Director, Storyboard)</li>
+                        <li>Yamada, Hirokazu (Episode Director)</li>
+                        <li>Yamamoto, Sayo (Episode Director, Storyboard)</li>
+                        <li>Yokoyama, Akitoshi (Episode Director, Storyboard, Key Animation, 2nd Key Animation)</li>
+                        <li>Burgmeier, John (Script)</li>
+                        <li>Kobayashi, Yasuko (Script, Series Composition)</li>
+                        <li>Medel, Jennifer (Script, Dialogue Editing)</li>
+                        <li>Rinehart, Tyson (Script)</li>
+                        <li>Seko, Hiroshi (Script)</li>
+                        <li>Takagi, Noboru (Script)</li>
+                        <li>Tatum, J. Michael (Script)</li>
+                        <li>Hirata, Tomohiro (Storyboard, Key Animation)</li>
+                        <li>Komatsuda, Daizen (Storyboard)</li>
+                        <li>Miyaji, Masayuki (Storyboard)</li>
+                        <li>Oohara, Minoru (Storyboard)</li>
+                        <li>Sasajima, Keiichi (Storyboard)</li>
+                        <li>Cinema Staff (Theme Song Performance)</li>
+                        <li>Hikasa, Youko (Theme Song Performance)</li>
+                        <li>Ishizuka, Rei (Theme Song Composition)</li>
+                        <li>Kameda, Seiji (Theme Song Arrangement)</li>
+                        <li>Linked Horizon (Theme Song Performance)</li>
+                        <li>Revo (Theme Song Lyrics, Theme Song Arrangement, Theme Song Composition)</li>
+                        <li>Abe, Misao (Key Animation)</li>
+                        <li>Akao, Ryoutarou (Key Animation)</li>
+                        <li>Anne Paillié, Mélanie (ADR Director)</li>
+                        <li>Aoki, Mariko (Key Animation, 2nd Key Animation)</li>
+                        <li>Arai, Kouichi (Key Animation)</li>
+                        <li>Arao, Hideyuki (Key Animation)</li>
+                        <li>Asano, Kyouji (Chief Animation Director, Key Animation, Character Design, Animation Director)</li>
+                        <li>Awai, Shigeki (Key Animation, 2nd Key Animation)</li>
+                        <li>Blackschleger, Aimee (Inserted Song Performance)</li>
+                        <li>Chiba, Takaaki (2nd Key Animation, Chief Animation Director, Animation Director, Setting, Key Animation)</li>
+                        <li>Cyua (Inserted Song Performance)</li>
+                        <li>Dawn-Claude, René (ADR Director)</li>
+                        <li>Ebara, Yasuyuki (Animation Director, Assistant Animation Director, Key Animation, 2nd Key Animation)</li>
+<li>Ebisu, Takuma (2nd Key Animation, Animation Director, Assistant Animation Director, Key Animation)</li>
+<li>Emoto, Masahiro (Key Animation)</li>
+<li>Endou, Eiichi (Key Animation)</li>
+<li>Enomoto, Hanako (2nd Key Animation)</li>
+<li>Fujii, Toshirou (Key Animation)</li>
+<li>Fujiki, Nana (Key Animation)</li>
+<li>Fujita, Masayuki (Animation Director)</li>
+<li>Fujita, Erika (Color Setting)</li>
+<li>Fukunaga, Gen (Executive Producer)</li>
+<li>Gotou, Masami (Key Animation)</li>
+<li>Habe, Takashi (Key Animation)</li>
+<li>Hagiwara, Hiromitsu (Key Animation)</li>
+<li>Hamaguchi, Akira (Key Animation)</li>
+<li>Hasegawa, Saki (Key Animation, 2nd Key Animation)</li>
+<li>Hasegawa, Hitomi (Key Animation, 2nd Key Animation, Assistant Animation Director, Animation Director)</li>
+<li>Hasegawa, Michio (Animation Director)</li>
+<li>Hashimoto, Hisanori (Key Animation)</li>
+<li>Hashimoto, Satoshi (Color Design)</li>
+<li>Hattori, Ichirou (Animation Director)</li>
+<li>Hida, Aya (Editing)</li>
+<li>Hiramatsu, Tadashi (Key Animation)</li>
+<li>Hirose, Izumi (Color Setting)</li>
+<li>Hoshino, Reika (Animation Director)</li>
+<li>Ikariya, Atsushi (Key Animation)</li>
+<li>Imada, Akane (Key Animation)</li>
+<li>Imai, Yousuke (Planning Producer)</li>
+<li>Imai, Arifumi (In-Between Animation, Animation Director, Key Animation)</li>
+<li>Isayama, Hajime (Original Creator)</li>
+<li>Ishii, Yumiko (Animation Director, Key Animation)</li>
+<li>Ishikawa, Mitsuhisa (Executive Producer)</li>
+<li>Itou, Youhei (Associate Producer)</li>
+<li>Itou, Tatsufumi (Key Animation)</li>
+<li>Kadowaki, Satoshi (Assistant Animation Director, Chief Animation Director, Key Animation, Animation Director, 2nd Key Animation)</li>
+<li>Kamiya, Tomomi (2nd Key Animation, Key Animation)</li>
+<li>Kamogawa, Takahiro (2nd Key Animation)</li>
+<li>Katou, Hiromi (Key Animation)</li>
+<li>Kawai, Yuumi (Key Animation)</li>
+<li>Kawakubo, Shintarou (Planning)</li>
+<li>Kitayama, Shuichi (Key Animation)</li>
+<li>Kobayashi, Mika (Inserted Song Performance)</li>
+<li>Kobayashi, Naoki (Key Animation)</li>
+<li>Komaru, Toshiyuki (Key Animation)</li>
+<li>Kouno, Toshiya (2nd Key Animation)</li>
+<li>Koyanagi, Tatsuya (Key Animation)</li>
+<li>Kubota, Chikashi (Key Animation)</li>
+<li>Kudou, Akiko (Animation Director)</li>
+<li>Kurahashi, Shizuo (Sound Effects)</li>
+<li>Laisné, Grégory (ADR Director)</li>
+<li>Liang, Boya (Key Animation)</li>
+<li>Maeda, Yoshihiro (Key Animation)</li>
+<li>Marques, Guilherme (ADR Director)</li>
+<li>Maruyama, Hiroo (Planning Producer)</li>
+<li>Matsushita, Takuya (Planning Producer)</li>
+<li>Matsutake, Tokuyuki (Key Animation)</li>
+<li>McFarland, Mike (ADR Director)</li>
+<li>Miki, Tatsuya (Key Animation)</li>
+<li>Miwa, Kazuhiro (Key Animation)</li>
+<li>Miyai, Kana (Animation Director)</li>
+<li>Miyazaki, Satomi (Animation Director)</li>
+<li>Mogi, Takahiro (Color Setting)</li>
+<li>Morishita, Katsuji (Planning Producer)</li>
+<li>Moriyama, You (Key Animation)</li>
+<li>Nakagawa, Hideki (Key Animation)</li>
+<li>Nakashige, Shunsuke (2nd Key Animation, Key Animation)</li>
+<li>Ogata, Ai (Key Animation)</li>
+<li>Okabe, Jun (Background Art)</li>
+<li>Ooima, Yoshitoki (Principle Drawing)</li>
+<li>Ortega, Gerardo (ADR Director)</li>
+<li>Ozaki, Tomomi (Character Design)</li>
+<li>Saitou, Daisuke (Animation Director)</li>
+<li>Sakai, Satoshi (Animation Director)</li>
+<li>Sangregório, Bruno (ADR Director)</li>
+<li>Satou, Toshiyuki (In-Between Animation, Key Animation, Animation Director)</li>
+<li>Satou, Michio (Animation Director)</li>
+<li>Sawano, Hiroyuki (Music)</li>
+<li>Sera, Kouta (Key Animation, Animation Director)</li>
+<li>Shibata, Shirou (Key Animation)</li>
+<li>Shimizu, Norie (Publicity)</li>
+<li>Shimizu, Katsuhiro (Animation Director)</li>
+<li>Shiotani, Naoyoshi (Key Animation)</li>
+<li>Shiozawa, Kaname (Key Animation)</li>
+<li>Shoukinji, Naoko (Key Animation)</li>
+<li>Tabata, Akira (Key Animation)</li>
+<li>Takahashi, Hideki (Key Animation)</li>
+<li>Takeuchi, Akira (Animation Director)</li>
+<li>Tanaka, Orie (Key Animation)</li>
+<li>Tanaka, Hironori (Key Animation)</li>
+<li>Tanino, Miho (2nd Key Animation)</li>
+<li>Tatezaki, Hiroshi (Animation Director)</li>
+<li>Tomita, Megumi (Animation Director, Assistant Animation Director)</li>
+<li>Tsubata, Yoshiaki (Key Animation)</li>
+<li>Tsubota, Shintarou (Key Animation)</li>
+<li>Uchiyama, Midori (Key Animation, 2nd Key Animation)</li>
+<li>Uehara, Makito (Key Animation)</li>
+<li>Umishima, Senbon (Key Animation)</li>
+<li>Wanibuchi, Kazuhiko (Key Animation)</li>
+<li>Washio (Key Animation)</li>
+<li>Yamada, Kazuhiro (Director of Photography)</li>
+<li>Yamamoto, Yuuko (Animation Director)</li>
+<li>Yamamura, Shunsuke (Animation Director)</li>
+<li>Yamanaka, Makiko (Color Setting)</li>
+<li>Yamatani, Naoto (Sound Effects)</li>
+<li>Yoshibe, Naoki (Key Animation)</li>
+<li>Yoshida, Kenichi (Key Animation)</li>
+<li>Yoshihara, Shunichirou (Art Director)</li>
+<li>mpi (Inserted Song Performance)</li>
+
+                    </ul>
+                </div>
+        </div>
+
+  </body>
+</html>
+    

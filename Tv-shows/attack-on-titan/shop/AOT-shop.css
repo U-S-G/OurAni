@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+*
+{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    min-height: 100vh;
+    background: linear-gradient(#0040ff,#8000ff);
+}
+header 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo
+{
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 15px;
+    text-decoration: none;
+}
+header ul li a:hover,
+header ul .active
+{
+    color: #8000ff;
+    background: #fff;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 100px;
+    background: linear-gradient(to top,#0040ff,transparent);
+    z-index: 10000;
+}
+/* section img
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+} */
+.sec h2 {
+    margin-left: 15px;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.Slider-frame
+{
+    overflow: hidden;
+    height: 800px;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+@-webkit-keyframes slide_animation
+{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left:2400px;}
+    50% {left:2400px;}
+    60% {left:1200px;}
+    70% {left:1200px;}
+    80% {left:0px;}
+    90% {left:0px;}
+    100% {left:0px;}
+}
+.slide-images
+{
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+.img-container
+{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}
+.img-container img
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}

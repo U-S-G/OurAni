@@ -1,0 +1,596 @@
+<html>
+    <head>
+        <script src="characters.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            OurAni
+        </title>
+        <link rel="Stylesheet" type="text/css" href="characters.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .loader{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(to top,#0040ff,transparent);
+                z-index: 100000000000000;
+                transition: opacity 0.75s, visibility 0.75s;
+            }
+            .loader--hidden{
+                opacity: 0;
+                visibility: hidden; 
+            }
+            .loader::after{
+                content: "";
+                width: 75px;
+                height: 75px;
+                border: 15px solid #ddd;
+                border-top-color: #0040ff;
+                border-radius: 50%;
+                animation: loading 0.75s ease infinite;
+            }
+            @keyframes loading {
+                from { transform: rotate(0turn)}
+                to {transform: rotate(1turn)}
+            }
+                    </style>
+                    <script>
+                        window.addEventListener("load", () => {
+                            const loader = document.querySelector(".loader");
+                            loader.classList.add("loader--hidden");
+            
+                            loader.addEventListener("trasitionend", () => {
+                                document.body.removeChild(loader);
+                            })
+                        })
+                    </script>
+    </head>
+                
+                <body>
+                    <div class="loader"></div>
+        <header>
+            <a href="../../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../../INDEX.html" class="active">Home</a></li>
+                <li><a class="GoBack" href="../Attack-on-titan.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            </ul>
+        </header>
+
+        <div class="break"><h1>Females</h1></div>
+        <!--///////////////////////Females////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// . -->
+
+        <div class="container">
+            <!--1st Card-->
+            <div class="card">
+                <div class="card_inner clickcard flipped">
+                    <div class="front face">
+        
+                        <div class="heading">
+                            <h2>Ackerman</h2>
+                        </div>
+                        <ul>
+                            <li><u>Female</u></li>
+                            <li>Name: Mikasa </li>
+                            <li>Born: feb 10</li>
+                            <li>Eldian </li>
+                        </ul>
+                        <div class="Character">
+                            <h3>Squad Levi</h3>
+                        </div>
+        
+        
+                        </div>
+                        <div class="Back Mikasa face">
+        
+                                <div class="description">
+                                    <h3>Click card</h3>
+                                </div>
+        
+                        </div>
+                    </div>
+                </div>
+        
+            <!--2nd card-->
+        
+            <div class="card">
+                <div class="card_inner clickcard flipped">
+                    <div class="front face">
+        
+                        <div class="heading">
+                            <h2>Braus</h2>
+                        </div>
+                        <ul>
+                            <li><u>Female</u></li>
+                            <li>Name: sasha </li>
+                            <li>Born: Jul 16</li>
+                            <li>Eldian </li>
+                        </ul>
+                        <div class="Character">
+                            <h3>Squad Levi</h3>
+                        </div>
+        
+                        </div>
+                        <div class="Back Sasha face">
+        
+                                <div class="description">
+                                    <h3>Click card</h3>
+                                </div>
+        
+                        </div>
+                    </div>
+                </div>
+        
+            <!--3rd card-->
+        
+            <div class="card">
+                <div class="card_inner clickcard flipped">
+                    <div class="front face">
+                        <div class="heading">
+                            <h2>Zoë</h2>
+                        </div>
+                        <ul>
+                            <li><u>Female</u></li>
+                            <li>Name: Hange </li>
+                            <li>Born: Sept 5</li>
+                            <li>Eldian </li>
+                        </ul>
+                        <div class="Character">
+                            <h3>Squad Levi</h3>
+                        </div>
+                        </div>
+                        <div class="back Hange face">
+                            <div class="description">
+                              <h3>Click card</h3>
+                        </div>
+                            
+        
+        
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Card 3 -->
+        
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Annie face">
+                            <div class="heading">
+                                <h2>Leonhart</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Annie  </li>
+                                <li>Born: March 16 </li>
+                                <li>Eldian </li>
+                            </ul>
+                            <div class="Character">
+                                <h3>warrior</h3>
+                            </div>
+                            </div>
+                            <div class="back Annie face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+        
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Yimr face">
+                            <div class="heading">
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Ymir </li>
+                                <li>Born: feb 17</li>
+                                <li>Eldian </li>
+                            </ul>
+                            </div>
+                            <div class="back Yimr face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+        
+                <!-- card 5 -->
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Ymir face">
+                            <div class="heading">
+                                <h2>Fritz</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Ymir  </li>
+                                <li>Eldian </li>
+                            </ul>
+                            <div class="Character">
+                                <h3>Founder</h3>
+                            </div>
+                            </div>
+                            <div class="back Ymir face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+        
+                <!-- card 6 -->
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front historia face">
+                            <div class="heading">
+                                <h2>Reiss</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Historia  </li>
+                                <li>Eldia </li>
+                            </ul>
+                            <div class="Character">
+                                <h3>Queen of the walls</h3>
+                            </div>
+                            </div>
+                            <div class="back historia face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+        
+                <!-- card 7 -->
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Pieck  face">
+                            <div class="heading">
+                                <h2>Finger </h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Pieck  </li>
+                                <li>Born: Aug 5</li>
+                                <li>Marley  </li>
+                            </ul>
+                            <div class="Character">
+                                <h3>warrior </h3>
+                            </div>
+                            </div>
+                            <div class="back Pieck face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+        
+                <!-- card 8 -->
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Dina face">
+                            <div class="heading">
+                                <h2>Fritz</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Dina </li>
+                                <li>Eldia </li>
+                            </ul>
+                            <div class="Character">
+                                <h3>Smiling Titan</h3>
+                            </div>
+                            </div>
+                            <div class="back Dina face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Coming soon card-->
+                    <div class="card">
+                        <div class="card_inner clickcard flipped">
+                            <div class="front MORE face">
+                                <div class="heading">
+                                    <h2>More COMING SOON</h2>
+                                </div>
+                                </div>
+                                <div class="back MORE face">
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+
+               
+<!--///////////////////////Break//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// . -->
+<div class="break"><h1>Males</h1></div>
+
+<!--///////////////////////Males//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// . -->
+
+    <div class="container male">
+    <!--1st Card-->
+    <div class="card">
+        <div class="card_inner clickcard flipped">
+            <div class="front Eren face">
+
+                <div class="heading">
+                    <h2>Yeager</h2>
+                </div>
+                <ul>
+                    <li><u>Male</u></li>
+                    <li>Name: Eren </li>
+                    <li>Born: March 30</li>
+                    <li>Eldian </li>
+                </ul>
+                <div class="Character">
+                    <h3>Founder</h3>
+                </div>
+                </div>
+                <div class="Back Eren face">
+                        <div class="description">
+                            <h3>Click card</h3>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+    <!--2nd card-->
+
+    <div class="card">
+        <div class="card_inner clickcard flipped">
+            <div class="front Levi face">
+
+                <div class="heading">
+                    <h2>Ackerman</h2>
+                </div>
+                <ul>
+                    <li><u>Male</u></li>
+                    <li>Name: Levi </li>
+                    <li>Born: Dec 25</li>
+                    <li>Eldian </li>
+                </ul>
+                <div class="Character">
+                    <h3>Captain Levi</h3>
+                </div>
+
+                </div>
+                <div class="Back Levi face">
+
+                        <div class="description">
+                            <h3>Click card</h3>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+    <!--3rd card-->
+
+    <div class="card">
+        <div class="card_inner clickcard flipped">
+            <div class="front Zeke face">
+                <div class="heading">
+                    <h2>Yeager</h2>
+                </div>
+                <ul>
+                    <li><u>Male</u></li>
+                    <li>Name: Zeke </li>
+                    <li>Born: Aug 1</li>
+                    <li>Marley </li>
+                </ul>
+                <div class="Character">
+                    <h3>Warrior</h3>
+                </div>
+                </div>
+                <div class="back Zeke face">
+                    <div class="description">
+                      <h3>Click card</h3>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Reiner face">
+                    <div class="heading">
+                        <h2>Braun</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Reiner  </li>
+                        <li>Born: Aug 1</li>
+                        <li>Marley </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>warrior</h3>
+                    </div>
+                    </div>
+                    <div class="back Reiner face">
+                        <div class="description">
+                          <h3>Click card</h3>
+                    </div>
+   
+                    </div>
+                </div>
+            </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front face">
+                    <div class="heading">
+                        <h2>Arlert</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Armin </li>
+                        <li>Born: Nov 3</li>
+                        <li>Eldian </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Squard Levi</h3>
+                    </div>
+                    </div>
+                    <div class="back Armin face">
+                        <div class="description">
+                          <h3>Click card</h3>
+                    </div>
+   
+                    </div>
+                </div>
+            </div>
+
+        <!-- card 5 -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Grisha face">
+                    <div class="heading">
+                        <h2>Yeager</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Grisha  </li>
+                        <li>Born: Jan 26</li>
+                        <li>Eldian </li>
+                    </ul>
+                    </div>
+                    <div class="back Grisha face">
+                        <div class="description">
+                          <h3>Click card</h3>
+                    </div>
+   
+                    </div>
+                </div>
+            </div>
+
+        <!-- card 6 -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Erwin face">
+                    <div class="heading">
+                        <h2>Smith</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Erwin  </li>
+                        <li>Born: Oct 14</li>
+                        <li>Eldian </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Soldier</h3>
+                    </div>
+                    </div>
+                    <div class="back Erwin face">
+                        <div class="description">
+                          <h3>Click card</h3>
+                    </div>
+   
+                    </div>
+                </div>
+            </div>
+
+        <!-- card 7 -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front face">
+                    <div class="heading">
+                        <h2>Kirstein </h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Jean  </li>
+                        <li>Born: Apr 7</li>
+                        <li>Eldian  </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Squard Levi </h3>
+                    </div>
+                    </div>
+                    <div class="back Jean face">
+                        <div class="description">
+                          <h3>Click card</h3>
+                    </div>
+   
+                    </div>
+                </div>
+            </div>
+
+        <!-- card 8 -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front face">
+                    <div class="heading">
+                        <h2>Springer</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Connie </li>
+                        <li>Born: May 2</li>
+                        <li>Eldian </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Squard Levi</h3>
+                    </div>
+                    </div>
+                    <div class="back Connie face">
+                        <div class="description">
+                          <h3>Click card</h3>
+                    </div>
+   
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coming soon card-->
+            <div class="card">
+                <div class="card_inner clickcard flipped">
+                    <div class="front MORE face">
+                        <div class="heading">
+                            <h2>More COMING SOON</h2>
+                        </div>
+                        </div>
+                        <div class="back MORE face">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <script src="characters.js"></script>
+            <script>
+              $(document).ready(function () {
+                // Add click event listener to elements with class "clickcard"
+                $(".clickcard").click(function () {
+                  // Toggle the class "flipped" on the closest ancestor with class "card_inner"
+                  $(this).closest(".card_inner").toggleClass("flipped");
+                });
+              });
+            </script>
+
+</body>
+</html>
