@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="FunFactsCSM.CSS" />
+    <title>OurAni</title>
+
+  <style>
+    .loader{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to top,#0040ff,transparent);
+        z-index: 100000000000000;
+        transition: opacity 0.75s, visibility 0.75s;
+    }
+    .loader--hidden{
+        opacity: 0;
+        visibility: hidden; 
+    }
+    .loader::after{
+        content: "";
+        width: 75px;
+        height: 75px;
+        border: 15px solid #ddd;
+        border-top-color: #0040ff;
+        border-radius: 50%;
+        animation: loading 0.75s ease infinite;
+    }
+    @keyframes loading {
+        from { transform: rotate(0turn)}
+        to {transform: rotate(1turn)}
+    }
+            </style>
+            <script>
+                window.addEventListener("load", () => {
+                    const loader = document.querySelector(".loader");
+                    loader.classList.add("loader--hidden");
+    
+                    loader.addEventListener("trasitionend", () => {
+                        document.body.removeChild(loader);
+                    })
+                })
+            </script>
+        </head>
+
+  <body>
+    <div class="loader"></div>
+    <header class="header" id="home">
+      <nav>
+        <div class="nav__bar">
+          <div class="logo nav__logo">
+            <a href="../../../INDEX.html">OURANI</a>
+          </div>
+          <ul class="nav__links" id="nav-links">
+            <li><a href="../shop/CSM shop.html"><img src="../shop/cart.png" class="shop" ></a></li>
+           <!-- <li><a href="#">Blog</a></li>   MAKE IT THE LINK TO COMMENT SECTION--> 
+          </ul>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="section__container header__container">
+        <div class="header__content">
+          <h3 class="section__subheader">Chainsaw man fun facts</h3>
+          <h1 class="section__header">
+            Learn more about what you knew and didn't know
+          </h1>
+          <div class="scroll__btn">
+            <a href="#about">
+              Scroll down
+              <span><i class="ri-arrow-down-line"></i></span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+    <section class="about">
+      <div class="section__container about__container">
+        <!--01-->
+        <div class="about__image about__image-1" id="about">
+          <img src="MVA.jfif" alt="about" />
+        </div>
+    
+        <div class="about__content about__content-1">
+          <h2 class="section__header">Manga vs Anime</h2>
+          <p>
+            What did the anime remove or add when incomparising to the manga?
+          </p>
+          <div class="about__btn">
+            <a href="#">
+              Read more
+              <span><i class="ri-arrow-right-line"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <!--02-->
+        <div class="about__image about__image-2" id="equipment">
+          <img src="THORIY.jfif" alt="about" />
+        </div>
+
+        <div class="about__content about__content-2">
+          <h2 class="section__header">Attack on titan Theories</h2>
+          <p>
+            What are the mysteries behind chainsaw man?
+          </p>
+          <div class="about__btn">
+            <a href="#">
+              Read more
+              <span><i class="ri-arrow-right-line"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <!--03-->
+        <div class="about__image about__image-3" id="blog">
+          <img src="FF.jfif" alt="about" />
+        </div>
+        
+        <div class="about__content about__content-3">
+          <h2 class="section__header">Did you know..?</h2>
+          <p>
+            Learn random fun facts about CSM that you probably didnt know
+          </p>
+          <div class="about__btn">
+            <a href="#">
+              Read more
+              <span><i class="ri-arrow-right-line"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <!--04-->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="logo footer__logo">
+            <a href="#">More</a>
+          </div>
+          <p>
+            <ul>
+              <li>....</li>
+              <li>....2</li>
+            </ul>
+          </p>
+        </div>
+
+    </footer>
+
+    <script src="js.js"></script>
+    <script src="JSCSM.js"></script>
+  </body>
+</html>
