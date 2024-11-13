@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+*
+*,
+*::after,
+*::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    background: linear-gradient(#0040ff,#8000ff);
+}
+header 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo
+{
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 15px;
+    text-decoration: none;
+}
+header ul li a:hover,
+header ul .active
+{
+    color: #8000ff;
+    background: #fff;
+}
+.container
+{
+    width: 80%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+}
+@media only screen and (max-width:780px)
+{
+    .container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.card
+{
+    width: 270px;
+    height: 370px;
+    margin: 15px;
+    perspective: 1000px;
+    font-family: 'poppins', sans-serif;
+    border-radius: 10px;
+}
+.card_inner
+{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s linear;
+    border-radius: 10px;
+}
+.face
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: whitesmoke;
+    border-radius: 10px;
+}
+.back
+{
+    background: center;
+    overflow: hidden;
+    z-index: -1;
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+}
+.back::before
+{
+    content: "";
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    box-sizing: 100% 100%;
+
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+.front, 
+.back
+{
+    transition: all .5s linear;
+}
+.front 
+{
+    background: url(BACK.jpg);
+    background-size: cover;
+    z-index: 1;
+    box-shadow: 5px 5px 5px #000a65;
+    background-position: center;
+}
+.heading
+{
+    width: 100%;
+    background: #004e92;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+}
+.description
+{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-style: italic;
+
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background-image: url(back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 15s linear infinite;
+}
+@keyframes back{
+	100%{
+		background-position: 2000px 0;
+	}
+}
+
+.h3
+{
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(249, 249, 249);
+}
+.back
+{
+    background-size: cover;
+    box-shadow: 0 0 0 #000a65;
+}
+li
+{
+    margin-top: 15px;
+    color: rgb(201, 201, 201);
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    font-style: oblique;
+}
+.container li
+{
+    color: white;
+    text-shadow: -1px -1px 0 black,  
+                  1px -1px 0 black,
+                 -1px  1px 0 black,
+                  1px  1px 0 black;
+}
+.Character
+{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    border: 0 0 10px 10px;
+    padding: 15px;
+    color: #e7e7e7;
+    text-shadow: -1px -1px 0 rgb(38, 0, 255),  
+                    1px -1px 0 rgb(38, 0, 255),
+                     -1px  1px 0 rgb(0, 13, 255),
+                     1px  1px 0 rgb(38, 0, 255);
+}
+.card_inner.flipped {
+    transform: rotateY(180deg);
+}
+.break{
+    width: 100%;
+    height: 5px;
+    background-color: aqua;
+}
+.break h1
+{
+    margin: 100px auto;
+    font: 5px;
+    color: #ffffff;
+    width: 10px;
+}
+
+/* Charaters */
+/*//////////////////////////////////////////female//////////////////////// */
+.Ai
+{
+    background-image: url(Chatacters/Females/Ai.jfif);
+}
+.Akane
+{
+    background-image: url(Chatacters/Females/akane.jfif);
+}
+.Frill
+{
+    background-image: url(Chatacters/Females/Frill.jfif);
+}
+.Fuyuko
+{
+    background-image: url(Chatacters/Females/Niino.webp);
+}
+.Kana
+{
+    background-image: url(Chatacters/Females/Kana.jfif);
+}
+.Minami
+{
+    background-image: url(Chatacters/Females/Minami.jfif);
+}
+.Mem
+{
+    background-image: url(Chatacters/Females/Mem-Cho.jfif);
+}
+.Miyako
+{
+    background-image: url(Chatacters/Females/Miyako.jfif);
+}
+.Ruby
+{
+    background-image: url(Chatacters/Females/Ruby.jfif);
+}
+.Sarina
+{
+    background-image: url(Chatacters/Females/Sarina.jfif);
+}
+.Yoriko
+{
+    background-image: url(Chatacters/Females/Yoriko.jfif);
+}
+.Yuki
+{
+    background-image: url(Chatacters/Females/Yuki.jfif);
+}
+/*////////////////////////////Male////////////////////////////////////// */
+.Aqua
+{
+    background-image: url(Chatacters/Males/Aqua.jfif);
+}
+.Gorou
+{
+    background-image: url(Chatacters/Males/Gorou.jfif);
+}
+.Goa
+{
+    background-image: url(Chatacters/Males/Goa.webp);
+}
+.Ichigo
+{
+    background-image: url(Chatacters/Males/Ichigo.jfif);
+}
+.Kengo
+{
+    background-image: url(Chatacters/Males/Kengo.jfif);
+}
+.Masaya
+{
+    background-image: url(Chatacters/Males/Masaya.jfif);
+}
+.Melt
+{
+    background-image: url(Chatacters/Males/Melt.jfif);
+}
+.Nobuyuki
+{
+    background-image: url(Chatacters/Males/Nobuyuki.jfif);
+}
+.Nobuyuki
+{
+    background-image: url(Chatacters/Males/Nobuyuki.jfif);
+}
+.Pieyon
+{
+    background-image: url(Chatacters/Males/Pieyon.jfif);
+}
+.Sumiaki
+{
+    background-image: url(Chatacters/Males/Sumiaki.jfif);
+}
+.Taiki
+{
+    background-image: url(Chatacters/Males/Taiki.jfif);
+}
+.Taishi
+{
+    background-image: url(Chatacters/Males/Taishi.jfif);
+}
+.Toshirou
+{
+    background-image: url(Chatacters/Males/Toshirou.webp);
+}
+/*different back pictures */
+/*////////////////////////////femaleS////////////////////////////////////// */
+.front.Ai
+{
+    background-image: url(Chatacters/Females/AiBack.jfif);
+}
+.front.Akane
+{
+    background-image: url(Chatacters/Females/AkaneBack.jfif);
+}
+.front.Frill
+{
+    background-image: url(Chatacters/Females/FrillBack.jfif);
+}
+.front.Fuyuko
+{
+    background-image: url(Chatacters/Females/NiinoBack.webp);
+}
+.front.Kana
+{
+    background-image: url(Chatacters/Females/KanaBack.jfif);
+}
+.front.Minami
+{
+    background-image: url(Chatacters/Females/MinamiBack.jfif);
+}
+.front.Mem
+{
+    background-image: url(Chatacters/Females/Mem-ChoBack.jfif);
+}
+.front.Miyako
+{
+    background-image: url(Chatacters/Females/MiyakoBack.jfif);
+}
+.front.Ruby
+{
+    background-image: url(Chatacters/Females/RubyBack.jfif);
+}
+.front.Sarina
+{
+    background-image: url(Chatacters/Females/SarinaBack.jfif);
+}
+.front.Yoriko
+{
+    background-image: url(Chatacters/Females/YorikoBack.jfif);
+}
+.front.Yuki
+{
+    background-image: url(Chatacters/Females/YukiBack.jfif);
+}
+/*////////////Males//////////////////*/
+.front.Aqua
+{
+    background-image: url(Chatacters/Males/AquaBack.jfif);
+}
+.front.Gorou
+{
+    background-image: url(Chatacters/Males/GorouBack.jfif);
+}
+.front.Goa
+{
+    background-image: url(Chatacters/Males/GoaBack.webp);
+}
+.front.Ichigo
+{
+    background-image: url(Chatacters/Males/IchigoBack.jfif);
+}
+.front.Kengo
+{
+    background-image: url(Chatacters/Males/KengoBack.jfif);
+}
+.front.Masaya
+{
+    background-image: url(Chatacters/Males/MasayaBack.jfif);
+}
+.front.Melt
+{
+    background-image: url(Chatacters/Males/MeltBack.jfif);
+}
+.front.Nobuyuki
+{
+    background-image: url(Chatacters/Males/NobuyukiBack.jfif);
+}
+.front.Pieyon
+{
+    background-image: url(Chatacters/Males/PieyonBack.jfif);
+}
+.front.Sumiaki
+{
+    background-image: url(Chatacters/Males/SumiakiBack.jfif);
+}
+.front.Taiki
+{
+    background-image: url(Chatacters/Males/TaikiBack.jfifss);
+}
+.front.Taiki
+{
+    background-image: url(Chatacters/Males/TaikiBack.jfif);
+}
+.front.Taishi
+{
+    background-image: url(Chatacters/Males/TaishiBack.jfif);
+}
+.front.Toshirou
+{
+    background-image: url(Chatacters/Males/ToshirouBack.webp);
+}
+/* COMING SOON CARD */
+.MORE,
+.front.more
+{
+    background-image: url(Characters/Coming\ soon.jfif);
+    background-position: center;
+}

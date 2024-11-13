@@ -1,0 +1,928 @@
+<html>
+    <head>
+        <script src="oshinoko.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            OurAni
+        </title>
+        <link rel="Stylesheet" type="text/css" href="oshinoko.css">
+        <style>
+            .loader{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(to top,#0040ff,transparent);
+                z-index: 100000000000000;
+                transition: opacity 0.75s, visibility 0.75s;
+            }
+            .loader--hidden{
+                opacity: 0;
+                visibility: hidden; 
+            }
+            .loader::after{
+                content: "";
+                width: 75px;
+                height: 75px;
+                border: 15px solid #ddd;
+                border-top-color: #0040ff;
+                border-radius: 50%;
+                animation: loading 0.75s ease infinite;
+            }
+            @keyframes loading {
+                from { transform: rotate(0turn)}
+                to {transform: rotate(1turn)}
+            }
+                    </style>
+                    <script>
+                        window.addEventListener("load", () => {
+                            const loader = document.querySelector(".loader");
+                            loader.classList.add("loader--hidden");
+            
+                            loader.addEventListener("trasitionend", () => {
+                                document.body.removeChild(loader);
+                            })
+                        })
+                    </script>
+    </head>
+                
+                <body>
+                    <div class="loader"></div>
+        <header>
+            <a href="../../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../../INDEX.html" class="active">Home</a></li>
+            </ul>
+        </header>
+
+        <div class="break"><h1>Females</h1></div>
+        <!--///////////////////////Females////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// . -->
+
+        <div class="container">
+            <!--1st Card-->
+            <div class="card">
+                <div class="card_inner clickcard flipped">
+                    <div class="front Ai face">
+        
+                        <div class="heading">
+                            <h2>Hoshino</h2>
+                        </div>
+                        <ul>
+                            <li><u>Female</u></li>
+                            <li>Name: Ai </li>
+                            <li>Human </li>
+                        </ul>
+                        <div class="Character">
+                            <h3>Idol</h3>
+                        </div>
+        
+        
+                        </div>
+                        <div class="Back Ai face">
+        
+                                <div class="description">
+                                    <h3>Click card</h3>
+                                </div>
+        
+                        </div>
+                    </div>
+                </div>
+        
+            <!--2nd card-->
+        
+            <div class="card">
+                <div class="card_inner clickcard flipped">
+                    <div class="front Akane face">
+                        <div class="heading">
+                            <h2>Kurokawa</h2>
+                        </div>
+                        <ul>
+                            <li><u>Female</u></li>
+                            <li>Name: Akane </li>
+                        </ul>
+                        <div class="Character">
+                            <h3>Actress</h3>
+                        </div>
+        
+                        </div>
+                        <div class="Back Akane face">
+        
+                                <div class="description">
+                                    <h3>Click card</h3>
+                                </div>
+        
+                        </div>
+                    </div>
+                </div>
+        
+            <!--3rd card-->
+        
+            <div class="card">
+                <div class="card_inner clickcard flipped">
+                    <div class="front Frill face">
+                        <div class="heading">
+                            <h2>Shiranui</h2>
+                        </div>
+                        <ul>
+                            <li><u>Female</u></li>
+                            <li>Name: Frill </li>
+                        </ul>
+                        <div class="Character">
+                            <h3>Multi-talented performer</h3>
+                        </div>
+                        </div>
+                        <div class="back Frill face">
+                            <div class="description">
+                              <h3>Click card</h3>
+                        </div>
+                            
+        
+        
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Card4 -->
+        
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Fuyuko face">
+                            <div class="headin">
+                                <h2>Niino</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Fuyuko</li>
+                            </ul>
+                            <div class="Character">
+                                <h3>Idol </h3>
+                            </div> 
+                            </div>
+                            <div class="back Fuyuko face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+        
+                <!-- Card 4 ////////////////////////////////////-->
+                     <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Kana face">
+                            <div class="heading">
+                                <h2>Arima</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Kana</li>
+                            </ul>
+                            <div class="Character">
+                                <h3>Actress</h3>
+                            </div> 
+                            </div>
+                            <div class="back Kana face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div> 
+        
+                <!-- card 5 ////////////////////////////////////-->
+                 <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Minami face">
+                            <div class="heading">
+                                <h2>Kotobuki</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Minami  </li>
+                            </ul>
+                            <div class="Character">
+                                <h3>Gravure Model</h3>
+                            </div>
+                            </div>
+                            <div class="back Minami face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div> 
+        
+                <!-- card 6//////////////////////////////////// -->
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Mem face">
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Mem-Cho  </li>
+                            </ul>
+                            <div class="character">
+                                <h3>Youtuber</h3>
+                            </div>
+                            </div>
+                            <div class="back Mem face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+        
+                <!-- card 7 ////////////////////////////////////-->
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Miyako  face">
+                            <div class="heading">
+                                <h2>Saitou</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Miyako  </li>
+                            </ul>
+                            <div class="Character">
+                                <h3>President of Ichigo Production, Inc</h3>
+                            </div>
+                            </div>
+                            <div class="back Miyako face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                <!-- card 9//////////////////////////////////// -->
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Ruby face">
+                            <div class="heading">
+                                <h2>Hoshino</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Ruby </li>
+                            </ul>
+                            <div class="Character">
+                                <h3>Idol</h3>
+                            </div>
+                            </div>
+                            <div class="back Ruby face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+                                    
+                    <!-- card 10//////////////////////////////////// -->
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Sarina face">
+                            <div class="heading">
+                                <h2>Tendouji</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Sarina </li>
+                            </ul>
+                            </div>
+                            <div class="back Sarina face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+                          
+                    <!-- card 11//////////////////////////////////// -->
+                <div class="card">
+                    <div class="card_inner clickcard flipped">
+                        <div class="front Yoriko face">
+                            <div class="heading">
+                                <h2>Kichijouji</h2>
+                            </div>
+                            <ul>
+                                <li><u>Female</u></li>
+                                <li>Name: Yoriko </li>
+                            </ul>
+                            <div class="Character">
+                                <h3>Mangaka</h3>
+                            </div>
+                            </div>
+                            <div class="back Yoriko face">
+                                <div class="description">
+                                  <h3>Click card</h3>
+                            </div>
+           
+                            </div>
+                        </div>
+                    </div>
+        <!-- Card 12///////////////////////////////////////////////////////////////////////////////// -->
+                    <div class="card">
+                        <div class="card_inner clickcard flipped">
+                            <div class="front Yuki face">
+                                <div class="heading">
+                                    <h2>Sumi</h2>
+                                </div>
+                                <ul>
+                                    <li><u>Female</u></li>
+                                    <li>Name: Yuki </li>
+                                </ul>
+                                <div class="Character">
+                                    <h3>Fashion Model</h3>
+                                </div>
+                                </div>
+                                <div class="back Yuki face">
+                                    <div class="description">
+                                      <h3>Click card</h3>
+                                </div>
+               
+                                </div>
+                            </div>
+                        </div>
+                    <!-- Coming soon card////////////////////////////////////-->
+                    <div class="card">
+                        <div class="card_inner clickcard flipped">
+                            <div class="front MORE face">
+                                <div class="heading">
+                                    <h2>More COMING SOON</h2>
+                                </div>
+                                </div>
+                                <div class="back MORE face">
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+
+               
+<!--///////////////////////Break//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// . -->
+<div class="break"><h1>Males</h1></div>
+
+<!--///////////////////////Males//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// . -->
+
+<div class="container male">
+    <!--1st Card////////////////////////////////////////////////////////////////////////////////-->
+    <div class="card">
+        <div class="card_inner clickcard flipped">
+            <div class="front Aqua face">
+
+                <div class="heading">
+                    <h2>Hoshino</h2>
+                </div>
+                <ul>
+                    <li><u>Male</u></li>
+                    <li>Name: Aqua </li>
+                </ul>
+                <div class="Character">
+                    <h3>Actor</h3>
+                </div>
+                </div>
+                <div class="Back Aqua face">
+                        <div class="description">
+                            <h3>Click card</h3>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+    <!--2nd card////////////////////////////////////////////////////////////////////////////////-->
+
+    <div class="card">
+        <div class="card_inner clickcard flipped">
+            <div class="front Gorou face">
+
+                <div class="heading">
+                    <h2>Amamiya</h2>
+                </div>
+                <ul>
+                    <li><u>Male</u></li>
+                    <li>Name: Gorou </li>
+                </ul>
+                <div class="character">
+                    <h3>Doctor</h3>
+                </div>
+                </div>
+                <div class="Back Gorou face">
+                        <div class="description">
+                            <h3>Click card</h3>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+    <!--3rd card////////////////////////////////////////////////////////////////////////////////-->
+
+    <div class="card">
+        <div class="card_inner clickcard flipped">
+            <div class="front Goa face">
+                <ul>
+                    <li><u>Male</u></li>
+                    <li>Name: Goa </li>
+                </ul>
+                <div class="Character">
+                    <h3>Scriptwriter</h3>
+                </div>
+                </div>
+                <div class="Back Goa face">
+                        <div class="description">
+                            <h3>Click card</h3>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4//////////////////////////////////////////////////////////////////////////////// -->
+
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Ichigo face">
+                    <div class="heading">
+                        <h2>Saitou</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Ichigo</li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Talent Manager</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Ichigo face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+
+        <!-- Card 5//////////////////////////////////////////////////////////////////////////////// -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Kengo face">
+                    <div class="heading">
+                        <h2>Morimoto</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Kengo </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Band Member</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Kengo face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+
+        <!-- card 6//////////////////////////////////////////////////////////////////////////////// -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Masaya face">
+                    <div class="heading">
+                        <h2>Kaburagi</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Masaya </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Producer</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Masaya face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+
+        <!-- card 7//////////////////////////////////////////////////////////////////////////////// -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Melt face">
+    
+                    <div class="heading">
+                        <h2>Narushima</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Melt  </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Model</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Melt  face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+
+        <!-- card 8//////////////////////////////////////////////////////////////////////////////// -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Nobuyuki face">
+    
+                    <div class="heading">
+                        <h2>Kumano</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Nobuyuki</li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Dancer</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Nobuyuki face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+
+        <!-- card 9 ////////////////////////////////////////////////////////////////////////////////-->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Pieyon face">
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Pieyon </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Youtuber</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Pieyon face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+
+                    <!-- card 10//////////////////////////////////////////////////////////////////////////////// -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Sumiaki face">
+                    <div class="heading">
+                        <h2>Raida</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Sumiaki  </li>
+                    </ul>
+                    <div class="character">
+                        <h3>Representative of Magic Floor</h3>
+                    </div>
+                    </div>
+                    <div class="Back Sumiaki face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+
+                    <!-- card 11//////////////////////////////////////////////////////////////////////////////// -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Taiki face">
+    
+                    <div class="heading">
+                        <h2>Himekawa</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Taiki </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Stage Actor</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Taiki face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+
+    <!-- card 12//////////////////////////////////////////////////////////////////////////////// -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Taishi face">
+                    <div class="heading">
+                        <h2>Taishi</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Taishi  </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Director</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Taishi face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+
+         <!-- card 13//////////////////////////////////////////////////////////////////////////////// -->
+        <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Toshirou face">
+    
+                    <div class="heading">
+                        <h2>Kindaichi</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Toshirou  </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Director</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Toshirou face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+
+           <!-- card 14//////////////////////////////////////////////////////////////////////////////// -->
+        <!-- <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Inosuke face">
+    
+                    <div class="heading">
+                        <h2>Hashibira</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Inosuke </li>
+                        <li>Born: April 22nd</li>
+                        <li>Human </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Demon slayer</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Inosuke face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div> -->
+
+         <!-- card 15//////////////////////////////////////////////////////////////////////////////// -->
+        <!-- <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Kyojuro face">
+    
+                    <div class="heading">
+                        <h2>Rengoku</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Kyojuro </li>
+                        <li>Born: May 10th</li>
+                        <li>Human </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Flame hashira</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Kyojuro face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div> -->
+
+         <!-- card 16//////////////////////////////////////////////////////////////////////////////// -->
+        <!-- <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Zenitsu face">
+    
+                    <div class="heading">
+                        <h2>Agatsuma</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Zenitsu </li>
+                        <li>Born: September 3rd</li>
+                        <li>Human </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Demon slayer</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Zenitsu face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div> -->
+
+         <!-- card 17//////////////////////////////////////////////////////////////////////////////// -->
+        <!-- <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Tengen face">
+    
+                    <div class="heading">
+                        <h2>Uzui</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Tengen </li>
+                        <li>Born: October 31st</li>
+                        <li>Human </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Sound hashira</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Tengen face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div> -->
+
+        <!-- card 18//////////////////////////////////////////////////////////////////////////////// -->
+        <!-- <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Senjuro face">
+    
+                    <div class="heading">
+                        <h2>Rengoku</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Senjuro </li>
+                        <li>Human </li>
+                    </ul>
+                    </div>
+                    <div class="Back Senjuro face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div> -->
+
+      <!-- card 19//////////////////////////////////////////////////////////////////////////////// -->
+        <!-- <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Sakonji face">
+    
+                    <div class="heading">
+                        <h2>Urokodaki</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Sakonji </li>
+                        <li>Human </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Cultivator of Swordsmen</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Sakonji face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div> -->
+
+       <!-- card 20//////////////////////////////////////////////////////////////////////////////// -->
+        <!-- <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Sabito face">
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Sabito </li>
+                        <li>Human </li>
+                    </ul>
+                    </div>
+                    <div class="Back Sabito face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div> -->
+
+        <!-- card 21//////////////////////////////////////////////////////////////////////////////// -->
+        <!-- <div class="card">
+            <div class="card_inner clickcard flipped">
+                <div class="front Obanai face">
+    
+                    <div class="heading">
+                        <h2>Iguro</h2>
+                    </div>
+                    <ul>
+                        <li><u>Male</u></li>
+                        <li>Name: Obanai </li>
+                        <li>Born: September 15th</li>
+                        <li>Human </li>
+                    </ul>
+                    <div class="Character">
+                        <h3>Serpent hashira</h3>
+                    </div> 
+                    </div>
+                    <div class="Back Obanai face">
+                            <div class="description">
+                                <h3>Click card</h3>
+                            </div>
+    
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Coming soon card-->
+            <div class="card">
+                <div class="card_inner clickcard flipped">
+                    <div class="front MORE face">
+                        <div class="heading">
+                            <h2>More COMING SOON</h2>
+                        </div>
+                        </div>
+                        <div class="back MORE face">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script src="oshinoko.js"></script>
+            <script>
+              $(document).ready(function () {
+                // Add click event listener to elements with class "clickcard"
+                $(".clickcard").click(function () {
+                  // Toggle the class "flipped" on the closest ancestor with class "card_inner"
+                  $(this).closest(".card_inner").toggleClass("flipped");
+                });
+              });
+            </script>
+
+</body>
+</html>
