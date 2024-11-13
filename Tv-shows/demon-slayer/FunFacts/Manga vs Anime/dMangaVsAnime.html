@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OurAni</title>
+    <link rel="stylesheet" type="text/css" href="dMangaVsAnime.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top, #0040ff, transparent);
+            z-index: 100000000000000;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+
+        .loader--hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader::after {
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #ddd;
+            border-top-color: #0040ff;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+
+        @keyframes loading {
+            from {
+                transform: rotate(0turn);
+            }
+
+            to {
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
+            loader.classList.add("loader--hidden");
+
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
+    </script>
+
+    <header>
+        <a href="../../../../INDEX.html" class="logo">Our-ani</a>
+        <ul>
+            <li><a href="../../../../INDEX.html" class="active">Home</a></li>
+            <li><a class="GoBack" href="../FunFactsDS.HTML"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            <li><a href="../../shop/Demon-slayer shop.html"><img src="../../shop/cart.png" class="shop"></a></li>
+        </ul>
+    </header>
+
+    <section>
+        <h1>Manga vs Anime <b>(Pick an episode)</b></h1>
+    </section>
+
+    <div class="container">
+        <div class="photo-gallery">
+            <!--season 1-->
+            <div class="photo">
+                <a href="Season 1/Hinokami.html"><img src="Season 1/Hinokami.PNG" alt=""></a>
+            </div>
+            <div class="photo">
+               <a href="Season 1/Pretend Family.html"> <img src="Season 1/pretend Family.PNG" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="Season 1/You Must Master a Single Thing.html"><img src="Season 1/You Must Master a Single Thing.PNG" alt=""></a>
+            </div>
+
+            <!-- season 2 -->
+            <div class="photo">
+                <a href="Season 2/Gathering.html"><img src="Season 2/Gathering.PNG" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="Season 2/Layered Memories.html"><img src="Season 2/Layered Memories.PNG" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="Season 2/Nver Give Up.html"><img src="Season 2/Nver Give Up.PNG" alt=""></a>
+            </div>
+            <div class="photo">
+                <a href="Season 2/Transformation.html"><img src="Season 2/Transformation.PNG" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="link">
+        <li><a href="../">FunFacts about Attack on Titan you didn't know</a></li>
+        <li><a href="#">FunFacts about Jujutsu Kaisen you didn't know</a></li>
+    </div> -->
+</body>
+</html>
