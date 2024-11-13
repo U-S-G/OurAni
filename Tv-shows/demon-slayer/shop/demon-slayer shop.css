@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+*
+{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    min-height: 100vh;
+    background: linear-gradient(#0040ff,#8000ff);
+}
+header 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo
+{
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 15px;
+    text-decoration: none;
+}
+header ul li a:hover,
+header ul .active
+{
+    color: #8000ff;
+    background: #fff;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 100px;
+    background: linear-gradient(to top,#0040ff,transparent);
+    z-index: 10000;
+}
+section img
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.sec {
+    width: 100%;
+    position: relative;
+    top: 10px;
+    background: #0040ff8d;
+}
+.sec h2 {
+    margin-left: 15px;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.sec img {
+    margin-right: 0;
+    margin-left: 20px;
+    width: 20%;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+.sec img:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+}
