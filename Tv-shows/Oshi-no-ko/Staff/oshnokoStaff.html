@@ -1,0 +1,477 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            OurAni
+        </title>
+        <link rel="Stylesheet" type="text/css" href="oshnokoStaff.css">
+    </head>
+    <style>
+        .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top,#0040ff,transparent);
+            z-index: 100000000000000;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+        .loader--hidden{
+            opacity: 0;
+            visibility: hidden; 
+        }
+        .loader::after{
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #ddd;
+            border-top-color: #0040ff;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+        @keyframes loading {
+            from { transform: rotate(0turn)}
+            to {transform: rotate(1turn)}
+        }
+                </style>
+                <script>
+                    window.addEventListener("load", () => {
+                        const loader = document.querySelector(".loader");
+                        loader.classList.add("loader--hidden");
+        
+                        loader.addEventListener("trasitionend", () => {
+                            document.body.removeChild(loader);
+                        })
+                    })
+                </script>
+            </head>
+            
+            <body>
+                <div class="loader"></div>
+        <header>
+            <a href="../../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../../INDEX.html" class="active">Home</a></li>
+            </ul>
+        </header>
+
+        <section>
+            <img src="Voice.jpg">
+            <a href="#" class="link">voice actors</a> 
+        </section> 
+
+        <div class="sec list-container">
+            <li><a href="#Voice">Characters/voice</a></li>
+            <li><a href="#Staff">staff</a></li>
+        </div>
+        <div class="sec">
+            <h2>Characters/voice</h2>
+            <div class="break"></div>
+            <div class="content-container" id="Voice">
+                <h3>Hoshino, Ruby</h3>
+                <img src="Pictures/Ruby.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Igoma, Yurie</li>
+                    <li>English: Marek, Alyssa</li>
+                    <li>French: Thuilier, Coralie</li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Hoshino, Aquamarine</h3>
+                <img src="pictures/Aquamarine.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Ootsuka, Takeo / Uchiyama, Yumi </li>
+                    <li>English: Stansbury, Jack / Moore, Chaney </li>
+                    <li>French: Faliu, Martin / Darazi, Estelle </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Hoshino, Ai</h3>
+                <img src="pictures/Ai.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Takahashi, Rie </li>
+                    <li>English: Litton, Donna Bella </li>
+                    <li>French: Facundo, Marie </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Arima, Kana</h3>
+                <img src="pictures/Kana.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Han, Megumi </li>
+                   <li> English: Rial, Natalie </li>
+                    <li>French: Marot, Kelly </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Taishi's Mother</h3>
+                <img src="pictures/Taishi's Mother.jfif"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Saitou, Kimiko </li>
+                    <li>English: Bannor, Marcy </li>
+                    <li>French: Cerdà, Cathy </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Ryousuke</h3>
+                <img src="pictures/Ryousuke.avif"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Tamaru, Atsushi </li>
+                    <li>English: Regojo, Gabriel </li>
+                    <li>French: Aubert-Carlin, Alan </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Pieyon</h3>
+                <img src="pictures/Pieyon.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Murata, Taishi </li>
+                    <li>English: Love, Andrew </li>
+                    <li>French: Tomassian, Alexis </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Narushima, Melt</h3>
+                <img src="pictures/Melt.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Maeda, Seiji </li>
+                    <li>English: Baugus, Bryson </li>
+                    <li>French: Brunswick, Hugo </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Morimoto, Kengo</h3>
+                <img src="pictures/Kengo.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Ban, Taito </li>
+                    <li>English: Gibbs, Adam </li>
+                    <li>French: Guetat, Nessym </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Mem-Cho</h3>
+                <img src="pictures/Mem-Cho.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Ookubo, Rumi </li>
+                    <li>English: Simmons, Juliet </li>
+                    <li>French: Sablé, Audrey </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Kurokawa, Akane</h3>
+                <img src="pictures/Akane.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Iwami, Manaka </li>
+                    <li>English: McGuire, Kristen </li>
+                    <li>French: Quilichini, Clara </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Kumano, Nobuyuki</h3>
+                <img src="pictures/Nobuyuki.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Ono, Tomohiro </li>
+                    <li>English: Gibbs, Scott </li>
+                    <li>French: Colas, Fred </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Kaburagi, Masaya</h3>
+                <img src="pictures/Masaya.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Terasoma, Masaki </li>
+                    <li>English: Doran, Justin </li>
+                    <li>French: Kramer, Julien </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Gotanda, Taishi</h3>
+                <img src="pictures/Taishi.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Kase, Yasuyuki </li>
+                    <li>English: Mahany, Ty </li>
+                    <li>French: Rehlinger, Boris </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Amemiya, Gorou</h3>
+                <img src="pictures/Gorou.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Ito, Kent </li>
+                    <li>English: Gee, Jeremy </li>
+                    <li>French: Boisseau, Damien </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Tendouji, Sarina</h3>
+                <img src="pictures/Sarin.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Takayanagi, Tomoyo </li>
+                    <li>English: Menzel, Savanna </li>
+                    <li>French: Doang, Geneviève </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Sumiaki, Raida</h3>
+                <img src="pictures/Sumiaki, Raida.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Suzumura, Kenichi </li>
+                    <li>English: Saab, Alejandro </li>
+                    <li>French: Prévost, Jérémy </li>
+            </div>
+            
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Sumi, Yuki</h3>
+                <img src="pictures/Yuki.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Oonishi, Saori </li>
+                    <li>English: Swasey, Olivia </li>
+                    <li>French: Soares, Clara </li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Shiranui, Frill</h3>
+                <img src="pictures/Frill.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Seto, Asami </li>
+                    <li>English: Wild, Annie </li>
+                    <li>French: Piau, Anne-Charlotte </li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Saitou, Miyako</h3>
+                <img src="pictures/Miyako.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Lynn </li>
+                    <li>English: Kelly, Christina </li>
+                    <li>French: Préjean, Laura </li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Saitou, Ichigo</h3>
+                <img src="pictures/Ichigo.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Egawa, Hisao </li>
+                    <li>English: Hearnsberger, Brandon </li>
+                    <li>French: Le Minoux, Martial </li>
+                </ul>
+            </div>
+
+            <div class="break"></div>
+            
+            <div class="content-container" id="Voice">
+                <h3>Kotobuki, Minami</h3>
+                <img src="pictures/Minami.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Youmiya, Hina </li>
+                    <li>English: Lauda, Brittany </li>
+                    <li>French: Bescht, Valérie </li>
+                </ul>
+            </div>
+            
+            <div class="break"></div>
+
+            <div class="content-container" id="Voice">
+                <h3>Kichijouji, Yoriko</h3>
+                <img src="pictures/Yoriko.jpg"> 
+                <ul>
+                    <li> </li>
+                    <li>Japanese: Itou, Shizuka </li>
+                    <li>English: Greenshield, Kelly </li>
+                    <li>French: Nonnenmacher, Marie </li>
+                </ul>
+            </div>
+            
+
+            <div class="break"></div>
+            <div class="break"></div>
+
+            <h2 id="Staff">Staff</h2>
+            <div class="break"></div>
+
+                <div class="peeps">
+                    <ul>
+                        <li>Aomura, Yousuke (Producer)</li>
+                        <li>Kamata, Hajime (Producer)</li>
+                        <li>Kobayashi, Ryou (Producer)</li>
+                        <li>Negishi, Genki (Producer)</li>
+                        <li>Yamashita, Shinpei (Producer)</li>
+                        <li>Yoshioka, Takuya (Producer)</li>
+                        <li>Hiramaki, Daisuke (Director, Episode Director, Storyboard)</li>
+                        <li>Takadera, Takeshi (Sound Director)</li>
+                        <li>Irie, Yasuhiro (Episode Director, Storyboard)</li>
+                        <li>Itou, Ryouta (Episode Director)</li>
+                        <li>Nakatani, Asami (Episode Director, Storyboard)</li>
+                        <li>Nishina, Kuniyasu (Episode Director, Storyboard)</li>
+                        <li>Tachibana, Saori (Episode Director, Storyboard, Assistant Director)</li>
+                        <li>Tokuno, Yuji (Episode Director, Storyboard)</li>
+                        <li>Yamamoto, Yuusuke (Episode Director, Storyboard, Key Animation)</li>
+                        <li>Tanaka, Jin (Script, Series Composition)</li>
+                        <li>Kakuchi, Takudai (Storyboard)</li>
+                        <li>Masunari, Koji (Storyboard)</li>
+                        <li>Nakayama, Naoya (Storyboard, Key Animation)</li>
+                        <li>Yoshikawa, Hiroaki (Storyboard)</li>
+                        <li>Avu-chan (Theme Song Lyrics, Theme Song Composition)</li>
+                        <li>Ayase (Theme Song Lyrics, Theme Song Composition, Theme Song Arrangement)</li>
+                        <li>Tsukada, Koji (Theme Song Arrangement)</li>
+                        <li>YOASOBI (Theme Song Performance)</li>
+                        <li>Ziyoou-vachi (Theme Song Performance)</li>
+                        <li>Akasaka, Aka (Original Creator)</li>
+                        <li>Arakaki, Issei (Key Animation)</li>
+                        <li>Atsumi, Tomoya (Animation Director, Key Animation, Chief Animation Director)</li>
+                        <li>Cho, Danny (Key Animation)</li>
+                        <li>Fan, Yanxin (Key Animation)</li>
+                        <li>Harada, Ayuko (Special Effects)</li>
+                        <li>Hayakawa, Asami (Key Animation, Animation Director)</li>
+                        <li>Hirayama, Kanna (Chief Animation Director, Character Design, In-Between Animation, Animation Director)</li>
+                        <li>Iga, Takurou (Music)</li>
+                        <li>Ishiguro, Kei (Color Design)</li>
+                        <li>Ishiguro, Ryo (Executive Producer)</li>
+                        <li>Itakura, Ken (Animation Director)</li>
+                        <li>Itou, Yuuki (Key Animation)</li>
+                        <li>Kabashima, Manami (Executive Producer)</li>
+                        <li>Katsumata, Masato (Chief Animation Director)</li>
+                        <li>Kawada, Kiyotaka (Sound Effects)</li>
+                        <li>Kidi (Key Animation)</li>
+                        <li>Kikuchi, Tsuyoshi (Planning)</li>
+                        <li>Kitamura, Yuuka (Key Animation)</li>
+                        <li>Kon, Kyouko (Key Animation)</li>
+                        <li>Kudou, Daijou (Planning)</li>
+                        <li>Kuroe, Rei (Key Animation)</li>
+                        <li>Kuwano, Takafumi (Director of Photography)</li>
+                        <li>Lambotte, Jessie (ADR Director)</li>
+                        <li>Lee, Min-Hee (In-Between Animation)</li>
+                        <li>Majiro (Chief Animation Director)</li>
+                        <li>Matsumoto, Miki (Chief Animation Director, Animation Director)</li>
+                        <li>Miyahara, Takuya (Key Animation)</li>
+                        <li>Mizumoto, Kouta (Background Art)</li>
+                        <li>Mizuno, Hiroaki (Key Animation)</li>
+                        <li>Mori, Hisashi (Key Animation)</li>
+                        <li>Muroga, Ayaka (Key Animation)</li>
+                        <li>Nagao, Keigo (Animation Director)</li>
+                        <li>Nakao, Kazuma (Key Animation)</li>
+                        <li>Narimatsu, Yoshito (Key Animation)</li>
+                        <li>Naruse, Ran (Key Animation, Animation Director)</li>
+                        <li>Okada, Masato (Key Animation)</li>
+                        <li>Okuda, Teppei (Key Animation)</li>
+                        <li>Oono, Tsutomu (Animation Director)</li>
+                        <li>Ooyoshi, Makoto (Planning)</li>
+                        <li>Osame, Takeshi (Animation Director, Key Animation)</li>
+                        <li>Rikuta, Kiyoki (Key Animation)</li>
+                        <li>Saitou, Keiichirou (In-Between Animation, Key Animation)</li>
+                        <li>Sawada, Kenji (Key Animation)</li>
+                        <li>Sawai, Shun (Key Animation, Character Design, Animation Director)</li>
+                        <li>Segawa, Kenji (Animation Director)</li>
+                        <li>Soga, Atsushi (Animation Director, 2nd Key Animation, Key Animation)</li>
+                        <li>Sugiyama, Kazutaka (Key Animation)</li>
+                        <li>Takahashi, Rie (Inserted Song Performance)</li>
+                        <li>Tamaki, Norihiko (Key Animation)</li>
+                        <li>Tanaka, Shou (Executive Producer)</li>
+                        <li>Tsai, Mengsu (Key Animation)</li>
+                        <li>Tsubone, Kentarou (Editing)</li>
+                        <li>Usami, Tetsuya (Art Director)</li>
+                        <li>Usui, Katsutarou (Executive Producer)</li>
+                        <li>Watanabe, Satomi (Animation Director)</li>
+                        <li>Yamamoto, Yumiko (Key Animation)</li>
+                        <li>Yamano, Masaaki (2nd Key Animation, Key Animation, Animation Director, Assistant Animation Director)</li>
+                        <li>Yamazaki, Kenji (Publicity)</li>
+                        <li>Yokoyama, Honoka (Animation Director, Key Animation)</li>
+                        <li>Yokoyari, Mengo (Original Character Design)</li>
+                        <li>Yopi (Animation Director)</li>
+                        <li>Yoshikawa, Maho (Animation Director, Chief Animation Director)</li>
+                        <li>Yufu, Kyouko (Key Animation)</li>
+                        <li>Zeng, Pinqiao (Key Animation)</li>
+                      </ul>
+                      
+                </div>
+        </div>
+
+  </body>
+</html>
+    

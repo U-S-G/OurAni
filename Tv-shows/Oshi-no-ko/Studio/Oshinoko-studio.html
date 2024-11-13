@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            OurAni
+        </title>
+        <link rel="stylesheet" href="Oshinoko-studio.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .loader{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(to top,#0040ff,transparent);
+                z-index: 100000000000000;
+                transition: opacity 0.75s, visibility 0.75s;
+            }
+            .loader--hidden{
+                opacity: 0;
+                visibility: hidden; 
+            }
+            .loader::after{
+                content: "";
+                width: 75px;
+                height: 75px;
+                border: 15px solid #ddd;
+                border-top-color: #0040ff;
+                border-radius: 50%;
+                animation: loading 0.75s ease infinite;
+            }
+            @keyframes loading {
+                from { transform: rotate(0turn)}
+                to {transform: rotate(1turn)}
+            }
+                    </style>
+                    <script>
+                        window.addEventListener("load", () => {
+                            const loader = document.querySelector(".loader");
+                            loader.classList.add("loader--hidden");
+            
+                            loader.addEventListener("trasitionend", () => {
+                                document.body.removeChild(loader);
+                            })
+                        })
+                    </script>
+                </head>
+                
+                <body>
+                    <div class="loader"></div>
+        <header>
+            <a href="../../../INDEX.html" class="logo">Our-Ani</a>
+            <ul>
+                <li><a href="../../../INDEX.html" class="active">Home</a></li>
+                <li><a class="GoBack" href="../Oshi no ko.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            </ul>
+        </header>
+
+        <section>
+            <div class="container">
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx"><a href="../../../Studios/STUDIO DOGA KOBO/STUDIO DOGA KOBO.html"><img src="Studio.jpg"></a></div>
+                        <div class="contentBx">
+                            <h3>Studio Doga Kobo<br><span>animation studio</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
