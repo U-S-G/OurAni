@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            OurAni
+        </title>
+        <link rel="Stylesheet" type="text/css" href="Jujustu kaisan.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top,#0040ff,transparent);
+            z-index: 100000000000000;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+        .loader--hidden{
+            opacity: 0;
+            visibility: hidden; 
+        }
+        .loader::after{
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #ddd;
+            border-top-color: #0040ff;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+        @keyframes loading {
+            from { transform: rotate(0turn)}
+            to {transform: rotate(1turn)}
+        }
+                </style>
+                <script>
+                    window.addEventListener("load", () => {
+                        const loader = document.querySelector(".loader");
+                        loader.classList.add("loader--hidden");
+        
+                        loader.addEventListener("trasitionend", () => {
+                            document.body.removeChild(loader);
+                        })
+                    })
+                </script>
+            </head>
+            
+            <body>
+                <div class="loader"></div>
+                <script>
+                    window.addEventListener("load", () => {
+                        const loader = document.querySelector(".loader");
+                        loader.classList.add("loader--hidden");
+            
+                        loader.addEventListener("transitionend", () => {
+                            document.body.removeChild(loader);
+                        });
+                    });
+            
+                    // Check if the user is on a mobile device
+                    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+            
+                    if (isMobile) {
+                        // Redirect to Website A for mobile users
+                        window.location.href = 'Mobile/Jujustukaisen.html';
+                    } else {
+                        // Display content for laptop/desktop users (Website B)
+                        document.body.innerHTML = `
+
+        <header>
+            <a href="../../INDEX.html" class="logo">Our-ani</a>
+            <ul>
+                <li><a href="../../INDEX.html" class="active">Home</a></li>
+                <li><a href="shop/jjk shop.html"><img src="shop/cart.png" class="shop"></a></li>
+                <li><a class="GoBack" href="../../TVshows.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            </ul>
+        </header>
+        
+        <div class="container">
+            <a href="Studio/jjk-studio.html" class="box one" style="--img:url('Jujustu-kaisan-images/Studio.png');" 
+            data-text="Studio" id="Studio"></a>
+            <a href="Author/JJK author.html" class="box two" style="--img:url(Jujustu-kaisan-images/Author.webp);"
+            data-text="Author"></a>
+            <a href="Staff/jjkStaff.html" class="box three" style="--img:url(Jujustu-kaisan-images/staff.jfif);"
+            data-text="Staff"></a>
+            <a href="Characters/JJKCharacters.html" class="box four" style="--img:url(Jujustu-kaisan-images/characters.jpg);"
+            data-text="Characters"></a>
+            <a href="FunFacts/FunFactsJJK.HTML" class="box five" style="--img:url(Jujustu-kaisan-images/Poster.jpeg);"
+            data-text="Fun-Facts"></a>
+        </div>
+
+
+        `;
+    }
+        </script>
+    </body>
+</html>
