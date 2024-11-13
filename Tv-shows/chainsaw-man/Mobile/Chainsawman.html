@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            OurAni
+        </title>
+        <link rel="Stylesheet" type="text/css" href="Chainsawman.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top, #0040ff, transparent);
+            z-index: 100000000000000;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+
+        .loader--hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader::after {
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #ddd;
+            border-top-color: #0040ff;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+
+        @keyframes loading {
+            from {
+                transform: rotate(0turn)
+            }
+
+            to {
+                transform: rotate(1turn)
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
+            loader.classList.add("loader--hidden");
+
+            loader.addEventListener("trasitionend", () => {
+                document.body.removeChild(loader);
+            })
+        })
+    </script>
+    <div class="loader"></div>
+
+    <header>
+        <a href="../../../INDEX.html" class="logo">Our-ani</a>
+        <ul>
+            <li><a href="../../../INDEX.html" class="active">Home</a></li>
+            <li><a class="GoBack" href="../../TVshows.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+            <li><a href="../shop/CSM shop.html"><img src="../shop/cart.png" class="shop" ></a></li>
+        </ul>
+    </header>
+    
+    <div class="container">
+        <div class="slider">
+            <!--image 1-->
+            <div class="slides" style="--img: url('studio.png')">
+                <div class="content">
+                    <h2>Studio</h2>
+                    <p><a href="../Studio/Chainsaw-man-studio.html">Learn more</a> about the studio</p>
+                </div>
+            </div>
+            <!--image 2-->
+            <div class="slides" style="--img: url('Author.jfif')">
+                <div class="content">
+                    <h2>Author</h2>
+                    <p><a href="../Author/CSM author.html">learn more</a> about the author</p>
+                </div>
+            </div>
+            <!--image 3-->
+            <div class="slides" style="--img: url('charactersmobile.png')">
+                <div class="content">
+                    <h2>Characters</h2>
+                    <p><a href="../Characters/CSMcharacter.html">Learn more</a> about each charater</p>
+                </div>
+            </div>
+            <!--image 4-->
+            <div class="slides" style="--img: url('Staffmobile.png')">
+                <div class="content">
+                    <h2>Staff</h2>
+                    <p><a href="../Staff/csmStaff.html">Learn more</a> about the people behind the shows making</p>
+                </div>
+            </div>
+            <!--image 5-->
+            <div class="slides" style="--img: url('funfactsmobile.png')">
+                <div class="content">
+                    <h2>Fun facts</h2>
+                  <p><a href="../FunFacts/FunFactsCSM.HTML">learn</a> fun facts about the show you may have not known about</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+
+        next.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]);
+        })
+        prev.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.prepend(slides[slides.length - 1]);
+        })
+    </script> 
+
+</body>
