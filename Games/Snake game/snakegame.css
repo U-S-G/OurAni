@@ -251,35 +251,58 @@ header ul .active
       to {transform: rotate(1turn)}
   }
 
+.game-board-container {
+    width: 240px; /* Smaller width */
+    height: 300px; /* Smaller height */
+    position: relative;
+    background: #8000ff;
+    border: 2px solid #000;
+}
+
 .btn-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 100%;
-    height: auto; /* Adjust height dynamically based on content */
     margin-top: 20px;
+    position: relative;
 }
 
 .btn {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    font-size: 20px;
-    padding: 8px 0px;
+    font-size: 16px;
     background: #8976F5;
     border: none;
     color: #d7d7d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (max-width: 600px) {
-    .btn {
-        width: 60px;
-        height: 60px;
-        font-size: 16px;
-    }
-    .btn-container {
-        gap: 5px;
-    }
+/* Button positioning */
+.btn:nth-child(1) { /* Left */
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
 }
+
+.btn:nth-child(3) { /* Right */
+    position: absolute;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.btn:nth-child(2) { /* Up */
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+.btn:nth-child(4) { /* Down */
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
