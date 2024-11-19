@@ -250,3 +250,36 @@ header ul .active
       from { transform: rotate(0turn)}
       to {transform: rotate(1turn)}
   }
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: auto; /* Adjust height dynamically based on content */
+    margin-top: 20px;
+}
+
+.btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 8px 0px;
+    background: #8976F5;
+    border: none;
+    color: #d7d7d8;
+}
+
+@media (max-width: 600px) {
+    .btn {
+        width: 60px;
+        height: 60px;
+        font-size: 16px;
+    }
+    .btn-container {
+        gap: 5px;
+    }
+}
