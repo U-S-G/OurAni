@@ -98,37 +98,15 @@ header ul .active
     background: #8000ff;
 
   }
-
 .btn-container {
     display: flex;
     position: relative;
-    width: 300px; /* Adjusted width to fit buttons */
-    height: 250px; /* Adjusted height to center buttons */
-    margin-top: 20px; /* Space between game box and buttons */
+    width: 200px; /* Adjusted width to fit buttons closer together */
+    height: 200px; /* Adjusted height to center buttons */
+    margin-top: 20px; /* Space between the game board and buttons */
     justify-content: center;
     align-items: center;
 }
-
-  .btn {
-
-    width: 120px;
-
-    height: 80px;
-
-    border-radius: 50%;
-
-    font-size: 28px;
-
-    padding: 8px 0px;
-
-    background: #8976F5;
-
-    border: none;
-
-    color: #d7d7d8;
-
-  }
-
 .btn {
     width: 60px;
     height: 60px;
@@ -140,27 +118,23 @@ header ul .active
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Button positioning */
-.btn:nth-child(1) { /* Left */
     position: absolute;
-    left: 20px; /* Adjust distance from center */
+}
+/* Button positioning - tighter layout */
+.btn:nth-child(1) { /* Left */
+    left: 10px; /* Closer to the center */
 }
 
 .btn:nth-child(3) { /* Right */
-    position: absolute;
-    right: 20px; /* Adjust distance from center */
+    right: 10px; /* Closer to the center */
 }
 
 .btn:nth-child(2) { /* Up */
-    position: absolute;
-    top: 20px; /* Adjust distance from center */
+    top: 10px; /* Closer to the center */
 }
 
 .btn:nth-child(4) { /* Down */
-    position: absolute;
-    bottom: 20px; /* Adjust distance from center */
+    bottom: 10px; /* Closer to the center */
 }
 
   .line {
