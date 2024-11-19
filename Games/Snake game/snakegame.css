@@ -253,50 +253,6 @@ header ul .active
     border: 2px solid #000;
 }
 
-.btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-    position: relative;
-}
 
-.btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    font-size: 16px;
-    background: #8976F5;
-    border: none;
-    color: #d7d7d8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-/* Button positioning */
-.btn:nth-child(1) { /* Left */
-    position: absolute;
-    left: 0;
-    transform: translateX(-50%);
-}
-
-.btn:nth-child(3) { /* Right */
-    position: absolute;
-    right: 0;
-    transform: translateX(50%);
-}
-
-.btn:nth-child(2) { /* Up */
-    position: absolute;
-    top: 0;
-    transform: translateY(-50%);
-}
-
-.btn:nth-child(4) { /* Down */
-    position: absolute;
-    bottom: 0;
-    transform: translateY(50%);
-}
 
