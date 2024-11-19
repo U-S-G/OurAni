@@ -99,15 +99,15 @@ header ul .active
 
   }
 
-  .btn-container {
-
+.btn-container {
+    display: flex;
     position: relative;
-
-    width: 100vw;
-
-    height: 40vh;
-
-  }
+    width: 300px; /* Adjusted width to fit buttons */
+    height: 250px; /* Adjusted height to center buttons */
+    margin-top: 20px; /* Space between game box and buttons */
+    justify-content: center;
+    align-items: center;
+}
 
   .btn {
 
@@ -129,45 +129,39 @@ header ul .active
 
   }
 
-  .btn:nth-child(1) {
+.btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 16px;
+    background: #8976F5;
+    border: none;
+    color: #d7d7d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Button positioning */
+.btn:nth-child(1) { /* Left */
     position: absolute;
+    left: 20px; /* Adjust distance from center */
+}
 
-    top: 15vh;
-
-    left: 8vw;
-
-  }
-
-  .btn:nth-child(3) {
-
+.btn:nth-child(3) { /* Right */
     position: absolute;
+    right: 20px; /* Adjust distance from center */
+}
 
-    top: 15vh;
-
-    left: 60vw;
-
-  }
-
-  .btn:nth-child(2) {
-
+.btn:nth-child(2) { /* Up */
     position: absolute;
+    top: 20px; /* Adjust distance from center */
+}
 
-    top: 5vh;
-
-    left: 34vw;
-
-  }
-
-  .btn:nth-child(4) {
-
+.btn:nth-child(4) { /* Down */
     position: absolute;
-
-    top: 25vh;
-
-    left: 33vw;
-
-  }
+    bottom: 20px; /* Adjust distance from center */
+}
 
   .line {
 
