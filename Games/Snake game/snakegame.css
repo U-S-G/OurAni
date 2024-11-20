@@ -68,16 +68,16 @@ header ul .active
 
   }
 
-  .container {
+.container {
     background: linear-gradient(#0040ff, #8000ff);
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 100px; /* Adjust this value to control the distance from the header */
-}S
+    justify-content: flex-start; /* Align everything towards the top */
+    margin-top: 50px; /* Reduced spacing from the header */
+}
 
   .game-board-container {
 
@@ -101,9 +101,9 @@ header ul .active
 .btn-container {
     display: flex;
     position: relative;
-    width: 200px; /* Adjusted width to fit buttons closer together */
-    height: 200px; /* Adjusted height to center buttons */
-    margin-top: 20px; /* Space between the game board and buttons */
+    width: 180px; /* Slightly narrower width */
+    height: 180px; /* Slightly smaller height to center buttons better */
+    margin-top: 10px; /* Less space between the game board and buttons */
     justify-content: center;
     align-items: center;
 }
@@ -120,21 +120,22 @@ header ul .active
     align-items: center;
     position: absolute;
 }
-/* Button positioning - tighter layout */
+
+/* Adjusted button positions */
 .btn:nth-child(1) { /* Left */
-    left: 10px; /* Closer to the center */
+    left: 0; /* Centered closer to the middle */
 }
 
 .btn:nth-child(3) { /* Right */
-    right: 10px; /* Closer to the center */
+    right: 0; /* Centered closer to the middle */
 }
 
 .btn:nth-child(2) { /* Up */
-    top: 10px; /* Closer to the center */
+    top: 0; /* Positioned closer to the center */
 }
 
 .btn:nth-child(4) { /* Down */
-    bottom: 10px; /* Closer to the center */
+    bottom: 0; /* Positioned closer to the center */
 }
 
   .line {
