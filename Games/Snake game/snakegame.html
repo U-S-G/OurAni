@@ -65,7 +65,7 @@
       constructor(w = 360, h = 400) {
         this.w = w;
         this.h = h;
-        this.blockSize = 10;
+        this.blockSize = 10; // Snake block size
         this.reset();
       }
 
@@ -104,6 +104,7 @@
       draw(ctx) {
         ctx.clearRect(0, 0, this.w, this.h);
 
+        // Draw the snake
         for (let i = 0; i < this.snakeArr.length; i++) {
           ctx.fillStyle = this.colors[i % this.colors.length];
           ctx.fillRect(
@@ -114,6 +115,7 @@
           );
         }
 
+        // Draw the food
         ctx.fillStyle = 'blue';
         ctx.fillRect(
           this.foodPos.x * this.blockSize,
