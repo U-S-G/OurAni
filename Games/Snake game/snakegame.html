@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="loader"></div>
+  <div class="loader" id="loader"></div>
   <header>
     <a href="../../INDEX.html" class="logo">Our-ani</a>
     <ul>
@@ -33,9 +33,9 @@
 
   <p id="score">Score: 0</p>
 
-  <!-- Inline JavaScript -->
   <script>
     const gameBoardContainer = document.querySelector('.game-board-container');
+    const loader = document.getElementById('loader'); // Target the loader element
     const DPI = window.devicePixelRatio;
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -47,6 +47,9 @@
       canvas.height = Math.floor(height * DPI);
       ctx.scale(DPI, DPI);
       gameBoardContainer.appendChild(canvas);
+
+      // Hide the loader after the canvas is created
+      loader.style.display = 'none';
     }
 
     function background(color = 'black') {
