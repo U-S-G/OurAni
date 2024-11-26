@@ -13,8 +13,8 @@
   <header>
     <a href="../../INDEX.html" class="logo">Our-ani</a>
     <ul>
-        <li><a href="../../INDEX.html" class="active">Home</a></li>
-        <li><a class="GoBack" href="../../gamespage.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+      <li><a href="../../INDEX.html" class="active">Home</a></li>
+      <li><a class="GoBack" href="../../gamespage.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
     </ul>
   </header>
 
@@ -34,6 +34,12 @@
   <p id="score">Score:0</p>
 
   <script>
+    // Loader Hide Logic
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+      loader.classList.add("loader--hidden");
+    });
+
     const gameBoardContainer = document.querySelector('.game-board-container');
     const DPI = window.devicePixelRatio;
     const canvas = document.createElement('canvas');
@@ -69,7 +75,7 @@
 
       reset() {
         this.pos = { x: 5, y: 8 };
-        this.snakeArr = [this.pos, this.pos, this.pos];
+        this.snakeArr = [{ ...this.pos }]; // Snake starts with length of 1 block
         this.score = 0;
         this.frameRate = 10;
         this.colors = ["#FF0000", "#00FF00", "#0000FF", "#FF00FF", "#FFFF00", "#00FFFF"];
@@ -87,7 +93,8 @@
 
         // Check for food collision
         if (this.pos.x === this.foodPos.x && this.pos.y === this.foodPos.y) {
-          this.snakeArr.push({ ...this.snakeArr[this.snakeArr.length - 1] }); // Add a new block at the tail
+          const newBlock = { ...this.snakeArr[this.snakeArr.length - 1] };
+          this.snakeArr.push(newBlock); // Add a new block at the tail
           this.#placeFood();
           this.score++;
 
@@ -135,6 +142,7 @@
             y: Math.floor(Math.random() * (this.h / this.blockSize)),
           };
 
+          // Ensure food does not overlap with the snake
           validPosition = !this.snakeArr.some(
             segment => segment.x === this.foodPos.x && segment.y === this.foodPos.y
           );
