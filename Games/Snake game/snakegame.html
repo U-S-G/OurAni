@@ -24,157 +24,202 @@
     </div>
     <span class="line"></span>
     <div class="btn-container">
-      <button class="btn" id="left">Left</button>
-      <button class="btn" id="up">Up</button>
-      <button class="btn" id="right">Right</button>
-      <button class="btn" id="down">Down</button>
+      <button class="btn">Left</button>
+      <button class="btn">Up</button>
+      <button class="btn">Right</button>
+      <button class="btn">Down</button>
     </div>
   </div>
 
   <p id="score">Score: 0</p>
 
+  <!-- Inline JavaScript -->
   <script>
-    // Hide loader after page loads
-    window.addEventListener("load", () => {
-      const loader = document.querySelector(".loader");
-      loader.classList.add("loader--hidden");
-    });
-
-    // Create canvas for the game
     const gameBoardContainer = document.querySelector('.game-board-container');
+    const DPI = window.devicePixelRatio;
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    const blockSize = 20;
-    const rows = 20; // Rows in the game board
-    const cols = 18; // Columns in the game board
-    canvas.width = cols * blockSize;
-    canvas.height = rows * blockSize;
-    gameBoardContainer.appendChild(canvas);
 
-    // Game variables
-    const snake = [{ x: 5, y: 8 }, { x: 4, y: 8 }, { x: 3, y: 8 }]; // Initial snake
-    let food = { x: 10, y: 10 }; // Initial food position
-    let direction = { x: 1, y: 0 }; // Initial direction (moving right)
-    let score = 0;
-
-    const scoreElement = document.getElementById("score");
-    const gameOverElement = document.getElementById("game-over");
-
-    // Draw a block
-    function drawBlock(x, y, color) {
-      ctx.fillStyle = color;
-      ctx.fillRect(x * blockSize, y * blockSize, blockSize, blockSize);
-      ctx.strokeStyle = "black";
-      ctx.strokeRect(x * blockSize, y * blockSize, blockSize, blockSize);
+    function createCanvas(width, height) {
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      canvas.width = Math.floor(width * DPI);
+      canvas.height = Math.floor(height * DPI);
+      ctx.scale(DPI, DPI);
+      gameBoardContainer.appendChild(canvas);
     }
 
-    // Draw the game board
-    function drawGame() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Draw the snake
-      snake.forEach((segment, index) => {
-        drawBlock(segment.x, segment.y, index === 0 ? "green" : "lime");
-      });
-
-      // Draw the food
-      drawBlock(food.x, food.y, "red");
+    function background(color = 'black') {
+      canvas.style.background = color;
     }
 
-    // Generate random food position
-    function placeFood() {
-      let newFood;
-      do {
-        newFood = {
-          x: Math.floor(Math.random() * cols),
-          y: Math.floor(Math.random() * rows),
-        };
-      } while (snake.some(segment => segment.x === newFood.x && segment.y === newFood.y));
-      food = newFood;
-    }
+    const Direction = {
+      RIGHT: 1,
+      LEFT: 2,
+      UP: 3,
+      DOWN: 4,
+    };
 
-    // Check for collisions
-    function checkCollision() {
-      const head = snake[0];
-
-      // Check if snake collides with walls
-      if (head.x < 0 || head.x >= cols || head.y < 0 || head.y >= rows) {
-        return true;
+    class SnakeGameAI {
+      constructor(w = 360, h = 400) {
+        this.w = w;
+        this.h = h;
+        this.blockSize = 10;
+        this.reset();
       }
 
-      // Check if snake collides with itself
-      for (let i = 1; i < snake.length; i++) {
-        if (head.x === snake[i].x && head.y === snake[i].y) {
-          return true;
+      reset() {
+        this.pos = { x: 5, y: 8 };
+        this.snakeArr = [
+          { x: 5, y: 8 },
+          { x: 4, y: 8 },
+          { x: 3, y: 8 },
+        ]; // Snake starts with 3 blocks
+        this.score = 0;
+        this.frameRate = 10;
+        this.colors = ["#FF0000", "#00FF00", "#0000FF", "#FF00FF", "#FFFF00", "#00FFFF"];
+        this.direction = Direction.RIGHT; // Default direction
+        this.#placeFood();
+      }
+
+      playStep(key) {
+        if (
+          (key === Direction.LEFT && this.direction === Direction.RIGHT) ||
+          (key === Direction.RIGHT && this.direction === Direction.LEFT) ||
+          (key === Direction.UP && this.direction === Direction.DOWN) ||
+          (key === Direction.DOWN && this.direction === Direction.UP)
+        ) {
+          key = this.direction; // Ignore invalid reverse moves
+        }
+        this.direction = key;
+
+        const head = { ...this.snakeArr[0] };
+        if (key === Direction.LEFT) head.x -= 1;
+        else if (key === Direction.UP) head.y -= 1;
+        else if (key === Direction.RIGHT) head.x += 1;
+        else if (key === Direction.DOWN) head.y += 1;
+
+        // Check collision with food
+        if (head.x === this.foodPos.x && head.y === this.foodPos.y) {
+          this.snakeArr.unshift(head); // Add new head
+          this.#placeFood(); // Place new food
+          this.score++;
+          if (this.score % 5 === 0) {
+            this.frameRate += 2; // Increase speed every 5 points
+          }
+        } else {
+          this.snakeArr.pop(); // Remove tail
+          this.snakeArr.unshift(head); // Add new head
+        }
+
+        if (this.#gameOver()) {
+          return { gameOver: true, score: this.score };
+        }
+
+        return { gameOver: false, score: this.score };
+      }
+
+      draw(ctx) {
+        ctx.clearRect(0, 0, this.w, this.h);
+
+        // Draw snake
+        this.snakeArr.forEach((segment, i) => {
+          ctx.fillStyle = this.colors[i % this.colors.length];
+          ctx.fillRect(
+            segment.x * this.blockSize,
+            segment.y * this.blockSize,
+            this.blockSize,
+            this.blockSize
+          );
+        });
+
+        // Draw food
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(
+          this.foodPos.x * this.blockSize,
+          this.foodPos.y * this.blockSize,
+          this.blockSize,
+          this.blockSize
+        );
+      }
+
+      #placeFood() {
+        let validPosition = false;
+        while (!validPosition) {
+          this.foodPos = {
+            x: Math.floor(Math.random() * (this.w / this.blockSize)),
+            y: Math.floor(Math.random() * (this.h / this.blockSize)),
+          };
+          validPosition = !this.snakeArr.some(
+            segment => segment.x === this.foodPos.x && segment.y === this.foodPos.y
+          );
         }
       }
 
-      return false;
-    }
+      #gameOver() {
+        const head = this.snakeArr[0];
+        // Check wall collisions
+        if (head.x < 0 || head.x >= this.w / this.blockSize || head.y < 0 || head.y >= this.h / this.blockSize) {
+          return true;
+        }
 
-    // Update the game state
-    function updateGame() {
-      const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
-
-      // Check if food is eaten
-      if (head.x === food.x && head.y === food.y) {
-        snake.unshift(head); // Grow the snake
-        score++;
-        scoreElement.textContent = `Score: ${score}`;
-        placeFood();
-      } else {
-        snake.pop(); // Remove the tail
-        snake.unshift(head); // Add new head
+        // Check self-collision
+        return this.snakeArr.slice(1).some(segment => segment.x === head.x && segment.y === head.y);
       }
 
-      // Check for game over
-      if (checkCollision()) {
-        gameOver();
+      getFrameRate() {
+        return this.frameRate;
       }
     }
 
-    // Game over
-    function gameOver() {
-      gameOverElement.style.visibility = "visible";
-      setTimeout(() => {
-        gameOverElement.style.visibility = "hidden";
-        resetGame();
-      }, 2000);
+    createCanvas(360, 400);
+    background('#D5D5D5');
+
+    const buttons = document.querySelectorAll('.btn');
+    const btnLeft = buttons[0];
+    const btnUp = buttons[1];
+    const btnRight = buttons[2];
+    const btnDown = buttons[3];
+    const scoreDom = document.querySelector('#score');
+    const gameOverDom = document.querySelector('#game-over');
+    const snake = new SnakeGameAI();
+
+    let CONTROL = Direction.RIGHT;
+    btnLeft.addEventListener('click', () => CONTROL = Direction.LEFT);
+    btnUp.addEventListener('click', () => CONTROL = Direction.UP);
+    btnRight.addEventListener('click', () => CONTROL = Direction.RIGHT);
+    btnDown.addEventListener('click', () => CONTROL = Direction.DOWN);
+
+    let now, then = Date.now();
+    let interval = 1000 / snake.getFrameRate();
+
+    function animate() {
+      now = Date.now();
+      const delta = now - then;
+
+      if (delta > interval) {
+        then = now - (delta % interval);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const infoObj = snake.playStep(CONTROL);
+        snake.draw(ctx);
+
+        scoreDom.innerHTML = `Score: ${infoObj.score}`;
+        interval = 1000 / snake.getFrameRate();
+
+        if (infoObj.gameOver) {
+          gameOverDom.style.visibility = 'visible';
+          setTimeout(() => {
+            snake.reset();
+            gameOverDom.style.visibility = 'hidden';
+          }, 2000);
+        }
+      }
+
+      requestAnimationFrame(animate);
     }
 
-    // Reset the game
-    function resetGame() {
-      snake.length = 0;
-      snake.push({ x: 5, y: 8 }, { x: 4, y: 8 }, { x: 3, y: 8 });
-      direction = { x: 1, y: 0 };
-      score = 0;
-      scoreElement.textContent = `Score: ${score}`;
-      placeFood();
-    }
-
-    // Handle button clicks
-    document.getElementById("left").addEventListener("click", () => {
-      if (direction.x === 0) direction = { x: -1, y: 0 };
-    });
-    document.getElementById("up").addEventListener("click", () => {
-      if (direction.y === 0) direction = { x: 0, y: -1 };
-    });
-    document.getElementById("right").addEventListener("click", () => {
-      if (direction.x === 0) direction = { x: 1, y: 0 };
-    });
-    document.getElementById("down").addEventListener("click", () => {
-      if (direction.y === 0) direction = { x: 0, y: 1 };
-    });
-
-    // Game loop
-    function gameLoop() {
-      updateGame();
-      drawGame();
-      setTimeout(gameLoop, 100);
-    }
-
-    resetGame();
-    gameLoop();
+    animate();
   </script>
 </body>
 </html>
