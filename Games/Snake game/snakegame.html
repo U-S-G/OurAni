@@ -35,7 +35,7 @@
 
   <script>
     const gameBoardContainer = document.querySelector('.game-board-container');
-    const loader = document.getElementById('loader'); // Target the loader element
+    const loader = document.getElementById('loader');
     const DPI = window.devicePixelRatio;
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -47,8 +47,6 @@
       canvas.height = Math.floor(height * DPI);
       ctx.scale(DPI, DPI);
       gameBoardContainer.appendChild(canvas);
-
-      // Hide the loader after the canvas is created
       loader.style.display = 'none';
     }
 
@@ -147,14 +145,15 @@
       }
 
       #gameover() {
-        const headPos = { ...this.snakeArr[0] };
-        if (headPos.x < 0 || headPos.x >= this.w / this.blockSize ||
-            headPos.y < 0 || headPos.y >= this.h / this.blockSize) {
+        // Check for wall collisions
+        if (this.pos.x < 0 || this.pos.x >= this.w / this.blockSize ||
+            this.pos.y < 0 || this.pos.y >= this.h / this.blockSize) {
           return true;
         }
 
+        // Check if the snake collides with itself
         for (let i = 1; i < this.snakeArr.length; i++) {
-          if (headPos.x === this.snakeArr[i].x && headPos.y === this.snakeArr[i].y) {
+          if (this.pos.x === this.snakeArr[i].x && this.pos.y === this.snakeArr[i].y) {
             return true;
           }
         }
@@ -200,6 +199,10 @@
 
         scoreDom.innerHTML = `Score: ${infoObj.score}`;
         interval = 1000 / snake.getFrameRate();
+
+        if (infoObj.gameOver) {
+          gameOverDom.style.display = 'block'; // Show "Game Over" message
+        }
       }
 
       requestAnimationFrame(animate);
