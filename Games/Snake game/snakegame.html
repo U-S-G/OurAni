@@ -33,8 +33,19 @@
 
   <p id="score">Score:0</p>
 
-  <!-- Inline JavaScript -->
+  <!-- JavaScript -->
   <script>
+    // Hide loader after page loads
+    window.addEventListener('load', () => {
+      const loader = document.querySelector('.loader');
+      loader.classList.add('loader--hidden');
+
+      // Wait for the transition to complete before removing the loader from the DOM
+      loader.addEventListener('transitionend', () => {
+        loader.style.display = 'none';
+      });
+    });
+
     const gameBoardContainer = document.querySelector('.game-board-container');
     const DPI = window.devicePixelRatio;
     const canvas = document.createElement('canvas');
